@@ -24,7 +24,7 @@ Coincidentally, I taught some relevant tools for this at a workshop last Septemb
 
 Here’s a brief tour through my favorite tools:
 
-# [packup](https://github.com/MilesMcBain/packup]){:target="_blank"} 
+# [packup](https://github.com/MilesMcBain/packup){:target="_blank"} 
 In interactive sessions and for less-structured workflows, I often add `library()` calls to my scripts after realizing I need a function without scrolling up to the top to put all the package load calls together. `packup` by [Miles McBain](https://t.co/A8jjzH92RB){:target="_blank"} provides an Rstudio addin to move all these calls up to the top of the script, remove any duplicates, and sort them alphabetically. `Packup libary() calls` works for both .R and .Rmd files and I see no downside to calling it before sharing a script, just make sure that the reordering isn't causing namespace conflicts.
 
 With `packup` we can easily go from this:
