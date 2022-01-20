@@ -124,7 +124,7 @@ We can also insert these sections with Ctrl+Shift+R (Cmd+Shift+R on a Mac), and 
 
 # [littleboxes](https://github.com/ThinkR-open/littleboxes){:target="_blank"}
 
-Lastly, `littleboxes` by the [ThinkR](ttps://github.com/ThinkR-open/littleboxe) squad gives us an addin for creating text titles with fancy ascii art boxes around them. I like to use these at the beginning of scripts, to include a date, the purpose of the file, and the author.
+Lastly, `littleboxes` by the [ThinkR](https://thinkr.fr/){:target="_blank"} squad gives us an addin for creating text titles with fancy ascii art boxes around them. I like to use these at the beginning of scripts, to include a date, the purpose of the file, and the author.
 
 With the example from earlier, we can add titles, comments, dates or whatever, then select these lines and call `Little Boxes` to add a fancy frame.
 
