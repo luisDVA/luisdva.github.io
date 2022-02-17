@@ -6,13 +6,21 @@ header:
   image: /assets/images/featureHabr.png
 ---
 
-A partir de julio de 2021, mi curso para preparación y limpieza de datos "[Data Cleaning with R](https://rfortherestofus.com/courses/data-cleaning/)", se encuentra disponible en el sitio [R for the Rest of Us](https://rfortherestofus.com).
+Esta página detalla los cursos y talleres de R que he impartido. Desde febrero de 2021 cuento con la certificación como [instructor](https://education.rstudio.com/trainers/people/verde_arregoitia+luis/) de Tidyverse por parte de RStudio Education. 
 
-Desde febrero de 2021 cuento con la certificación como [instructor](https://education.rstudio.com/trainers/people/verde_arregoitia+luis/) de Tidyverse por parte de RStudio Education.
+- Desde julio de 2021, mi curso para preparación y limpieza de datos "[Data Cleaning with R](https://rfortherestofus.com/courses/data-cleaning/)", se encuentra disponible en el sitio [R for the Rest of Us](https://rfortherestofus.com).
 
 
 ## Cursos de R impartidos
+***
 
+- [Getting the most out of R](https://www.physalia-courses.org/previous-courses-workshops/2022/). Curso impartido para la organización Physalia Courses durante febrero 2022 - 18 Asistentes, 10 países. [materiales](https://github.com/luisDVA/physalia-R)
+ 
+ <figure class="half">
+    <img src="/assets/images/slidesld.png">
+    <img src="/assets/images/imagegtmor.jpg">
+</figure>
+ 
 - gg+: paquetes para extender las capacidades de `ggplot2`. Tutorial impartido durante LatinR 2021. Virtual, 04/11/2021.  [materiales](https://github.com/luisDVA/ggmas)  
 
 - Taller: Disponibilidad del conocimiento científico y acceso abierto a código y datos de investigación. CAPES UC, Chile. Septiembre 2021. [materiales](https://docs.google.com/presentation/d/1UnyRUl5VeguLP7X0YERbqfi7bn8K2UpoljGJSaMEJnY/edit?usp=sharing)  
