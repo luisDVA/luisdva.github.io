@@ -6,17 +6,21 @@ permalink: /R-training/
 share: false
 header:
   image: /assets/images/featureRRU.png
+  overlay_filter: 0.3
 ---
 
 This page covers the various R courses and workshops that I have either developed, taught, or helped with. If you need training in R-related topics in either English or Spanish, do not hesitate to contact me.
 
-- Since February of 2021 I am an RStudio Education Certified Trainer (`tidyverse` specialization). See my profile [here](https://education.rstudio.com/trainers/people/verde_arregoitia+luis/)   
-- As of June 2022 I am a certified Carpentries [Instructor](https://carpentries.org/instructors/) (Software Carpentry).   
+- Since February of 2021 I am an RStudio Education Certified Trainer (`tidyverse` specialization). See my profile [here](https://education.rstudio.com/trainers/people/verde_arregoitia+luis/){:target="_blank"}.   
+- As of June 2022 I am a certified Carpentries [Instructor](https://carpentries.org/instructors/){:target="_blank"} (Software Carpentry).   
 
 ## Upcoming courses
 [Getting the most out of R](https://www.physalia-courses.org/courses-workshops/gmr/) (2nd Edition)  
-Scheduled for October 2022, Spots still available.
+Scheduled for October 2022, Spots still available.  
+
 _Course overview_  
+  
+  
 Many scientists start using R for very specific purposes with little training in computer science, data organization, and software development. Even advanced users may bypass important tools and abstractions which can ultimately lead to bad habits and wasting time. Get the most of R by exploring topics that usually fall outside of data analysis and visualization curricula.
 This course will cover blind spots in existing materials by working through the intermediate steps in various pairs of problems and solutions that often get overlooked because of assumed knowledge.
 
@@ -25,16 +29,16 @@ My [Data Cleaning with R](https://rfortherestofus.com/courses/data-cleaning/) co
 
 This course covers the key stages for cleaning messy data efficiently, including:  
 
-    Getting data into tidy format
-    Using regular expressions to deal with complex character data
-    Working with missing data
-    Identifyng and dealing with duplicate values
-    And much, much more!
+- Getting data into tidy format
+- Using regular expressions to deal with complex character data
+- Working with missing data
+- Identifyng and dealing with duplicate values
+- And much, much more!
 
 ## Past courses, workshops, and tutorials
 ***
 
-- [Getting the most out of R](https://www.physalia-courses.org/previous-courses-workshops/2022/). 4-day intensive course for Physalia Courses, February 2022 - 18 attendees from 10 countries. [materials](https://github.com/luisDVA/physalia-R)
+- [Getting the most out of R](https://www.physalia-courses.org/previous-courses-workshops/2022/){:target="_blank"}. 4-day intensive course for Physalia Courses, February 2022 - 18 attendees from 10 countries. [materials](https://github.com/luisDVA/physalia-R){:target="_blank"}
  
  <figure class="half">
     <img src="/assets/images/slidesld.png">
@@ -42,11 +46,11 @@ This course covers the key stages for cleaning messy data efficiently, including
 </figure>
 
 
-- gg+: paquetes para extender las capacidades de `ggplot2`. Spanish-Language tutorial taught for LatinR 2021, 04/11/2021.  [materials](https://github.com/luisDVA/ggmas)  
+- gg+: paquetes para extender las capacidades de `ggplot2`. Spanish-Language tutorial taught for LatinR 2021, 04/11/2021.  [materials](https://github.com/luisDVA/ggmas){:target="_blank"}  
 
-- Disponibilidad del conocimiento científico y acceso abierto a código y datos de investigación. Spanish-language workshop for CAPES UC, Chile. Septiembre 2021. [materials](https://docs.google.com/presentation/d/1UnyRUl5VeguLP7X0YERbqfi7bn8K2UpoljGJSaMEJnY/edit?usp=sharing)  
+- Disponibilidad del conocimiento científico y acceso abierto a código y datos de investigación. Spanish-language workshop for CAPES UC, Chile. Septiembre 2021. [materials](https://docs.google.com/presentation/d/1UnyRUl5VeguLP7X0YERbqfi7bn8K2UpoljGJSaMEJnY/edit?usp=sharing){:target="_blank"}  
 
-- Importando datos desde hojas de cálculo. 2020. Spanish-Language tutorial taught at LatinR 2020. [materials](https://github.com/luisDVA/tallerxl). [youtube](https://www.youtube.com/watch?v=vp_1N2tOFqI)  
+- Importando datos desde hojas de cálculo. 2020. Spanish-Language tutorial taught at LatinR 2020. [materials](https://github.com/luisDVA/tallerxl){:target="_blank"}. [youtube](https://www.youtube.com/watch?v=vp_1N2tOFqI){:target="_blank"}  
 
 
 <figure class="third">
@@ -57,7 +61,7 @@ This course covers the key stages for cleaning messy data efficiently, including
 
 
 - Limpieza, manipulación y transformación de datos en R. 2019. _pre-conference workshop at IV Congreso Peruano de Mastozoología_.  
-- Visualización de datos y producción de figuras para publicaciones utilizando R y ggplot2. 2018. _Pre-conference workshop at XIV Congreso Nacional de Mastozoología_ [slides](https://docs.google.com/presentation/d/1SKtM-2RLXwfGj3uFXXZx8-mT_q0VTSjYomt2d_R6NYI/edit?usp=sharing).  
+- Visualización de datos y producción de figuras para publicaciones utilizando R y ggplot2. 2018. _Pre-conference workshop at XIV Congreso Nacional de Mastozoología_ [slides](https://docs.google.com/presentation/d/1SKtM-2RLXwfGj3uFXXZx8-mT_q0VTSjYomt2d_R6NYI/edit?usp=sharing){:target="_blank"}.  
   
 <figure class="half">
     <img src="/assets/images/luisaamp.png">
