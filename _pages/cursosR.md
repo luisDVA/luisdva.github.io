@@ -6,7 +6,11 @@ header:
   image: /assets/images/featureHabr.png
 ---
 
-Esta página detalla los cursos y talleres de R que he impartido. Desde febrero de 2021 cuento con la certificación como [instructor](https://education.rstudio.com/trainers/people/verde_arregoitia+luis/) de Tidyverse por parte de RStudio Education. 
+Esta página detalla los cursos y talleres de R que he impartido. Si requieres instrucción en algún tema relevante no dudes en contactarme.
+
+Desde febrero de 2021 cuento con la certificación como [instructor](https://education.rstudio.com/trainers/people/verde_arregoitia+luis/) de Tidyverse por parte de RStudio Education, y desde junio de 2022 soy un instructor certificado de [Software Carpentry](https://carpentries.org/instructors/).
+
+- Aún quedan lugares para la segunda edición de mi curso "[Getting the most out of R](https://www.physalia-courses.org/courses-workshops/gmr/)" que está programado para Octubre de 2022.
 
 - Desde julio de 2021, mi curso para preparación y limpieza de datos "[Data Cleaning with R](https://rfortherestofus.com/courses/data-cleaning/)", se encuentra disponible en el sitio [R for the Rest of Us](https://rfortherestofus.com).
 
