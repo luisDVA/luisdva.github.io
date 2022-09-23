@@ -20,7 +20,10 @@ Earlier this month I saw a couple of waffle charts on Twitter used as a nice alt
 
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a> week 36 Lego Bricks, data from <a href="https://t.co/1l8zxz3rpU">https://t.co/1l8zxz3rpU</a>, courtesy of <a href="https://twitter.com/geokaramanis?ref_src=twsrc%5Etfw">@geokaramanis</a>. <br><br>Waffle plot inspired by <a href="https://twitter.com/issa_madjid?ref_src=twsrc%5Etfw">@issa_madjid</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> code: <a href="https://t.co/7TLlBIL2gu">https://t.co/7TLlBIL2gu</a> <a href="https://t.co/N6SazCysof">pic.twitter.com/N6SazCysof</a></p>&mdash; Lee Olney (@leeolney3) <a href="https://twitter.com/leeolney3/status/1567009220389703680?ref_src=twsrc%5Etfw">September 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-
+##  
+  
+  
+  
 Coincidentally, I had struggled with this a few months back for some freelance work and was meaning to document this alternative approach that uses [`ggsvg`](https://coolbutuseless.github.io/package/ggsvg/){:target="_blank"} to draw svg (Scalable Vector Graphics) image files arranged in a waffle-like grid. Using svg images has the advantage of us being able to map aesthetics such as size, fill, or color to different elements of the svg. This way we don’t need separate image files or icons if we only need them to vary in size or color.
 
 ## A quick example:
