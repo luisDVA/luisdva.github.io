@@ -4,7 +4,7 @@ excerpt: "Useful function from unheadr for data cleaning"
 tagline: "Making column names usable"
 classes: wide
 category: rstats
-published: false
+published: true
 tags: 
   - unheadr
   - mash
@@ -13,8 +13,8 @@ tags:
   - merged
 header: 
   image: /assets/images/featureMash.png
- 
- ---
+
+---
 
 
 
