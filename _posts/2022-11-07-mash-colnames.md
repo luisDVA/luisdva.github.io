@@ -4,7 +4,6 @@ excerpt: "Useful function from unheadr for data cleaning"
 tagline: "Making column names usable"
 classes: wide
 category: rstats
-published: true
 tags: 
   - unheadr
   - mash
@@ -13,10 +12,7 @@ tags:
   - merged
 header: 
   image: /assets/images/featureMash.png
-
 ---
-
-
 
 Last this week I saw [Riva Quiroga](https://linktr.ee/rivaquiroga){:target="_blank"} masterfully import and clean a scary spreadsheet during an [RLadies meetup](https://vimeo.com/766089428){:target="_blank"}, and I recognized some common issues with other people’s data for which I have already written relevant functions. 
 
