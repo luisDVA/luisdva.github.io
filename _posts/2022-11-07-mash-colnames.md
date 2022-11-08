@@ -23,195 +23,203 @@ Last this week I saw [Riva Quiroga](https://linktr.ee/rivaquiroga){:target="_bla
 I also realized that I never wrote a dedicated post for the `mash_colnames` function in the [unheadr](https://unheadr.liomys.mx){:target="_blank"} package. This functionality has been around for a while now, but is worth describing in detail (plus I get to create some new teaching materials). Credit goes to [Jarret Byrnes](http://byrneslab.net){:target="_blank"}, who contributed the initial of the function in this [GitHub issue](https://github.com/luisDVA/unheadr/issues/4){:target="_blank"}. I just added some tidyeval and a few enhancements for a better fit within the package. Internally, `mash_colnames` pivots the column headers and the first _n_ rows of the data and ‘mashes’ whatever needs to be together columnwise.
 
 
-`mash_colnames()` has two main uses. We can apply this nifty function to:
+`mash_colnames()` has two main uses. We can apply this nifty function to data with the following issues:
 
 
-Data with the variable names split across > 1 rows (i.e. there are fragments of the headers are in the first few data rows) 
-
-<figure>
-    <a href="/assets/images/mash.png"><img src="/assets/images/mash.png" ></a>
-        <figcaption>oh no</figcaption>
-</figure>
-
-This little example here with rodent data has 
+## Data with the variable names split across > 1 rows (i.e. there are fragments of the headers are in the first few data rows) 
 
 <figure>
     <a href="/assets/images/mashnolabs.png"><img src="/assets/images/mashnolabs.png" ></a>
+        <figcaption>oh no</figcaption>
+</figure>
+
+This little example here with rodent data has different bits of the column headers spread out 'vertically' for some reason. This is quite common as far as I've seen. This next image below explains the problem a bit better. Notice that if there were any separators between the pieces of column headers, these are now implicit. 
+
+
+<figure>
+    <a href="/assets/images/mash.png"><img src="/assets/images/mash.png" ></a>
         <figcaption>oh my</figcaption>
 </figure>
 
-Names split across >1 rows but with gaps in the headers at the very top. This happens when cells were originally merged in a spreadsheet or formatted table, or the gaps are there intentionally to imply that the values along this row are the same until a new one appears. I’m not sure about the correct terms for this but [Charlie Hadley](https://www.visibledata.co.uk/about.html){:target="_blank"} referred to this as “non-regular spanning of column headers”
+Ultimately, we most likely are interested in something like this:
 
-IMGS
+<figure>
+    <a href="/assets/images/mashed.png"><img src="/assets/images/mashed.png" ></a>
+        <figcaption>much better</figcaption>
+</figure>
 
+
+## Names split across >1 rows but with gaps in the headers at the very top 
+
+This happens when cells were originally merged in a spreadsheet or formatted table, or maybe the gaps are there intentionally to imply that the values along this row are the same until a new one appears. I’m not sure about the correct terms for this but [Charlie Hadley](https://www.visibledata.co.uk/about.html){:target="_blank"} referred to this as “non-regular spanning of column headers”
+
+<figure>
+    <a href="/assets/images/ragged.png"><img src="/assets/images/ragged.png" ></a>
+        <figcaption>ragged</figcaption>
+</figure>
+
+With colors to show which columns are meant to share a piece of header, the data look like this:
+
+<figure>
+    <a href="/assets/images/multirow.png"><img src="/assets/images/multirow.png" ></a>
+        <figcaption>messy</figcaption>
+</figure>
+
+A more usable version of the data would look like this:
+
+<figure>
+    <a href="/assets/images/multirow_fixed.png"><img src="/assets/images/multirow_fixed.png" ></a>
+        <figcaption>nicer</figcaption>
+</figure>
 
 Having shown the two common issues that we can address with unheadr, let’s work through the same examples using code.
 
+# Working with code
 
-To fix messy names broken across rows, we tell mash_colnames how many data rows have header fragments in them. There is also a xxx argument for cases in which we needed to skip the names.
+Let's set up the same example data from the images above and fix the issues.
 
+{% highlight r %}
+library(unheadr) # CRAN v0.3.3
 
+rodents <- 
+tibble::tribble(
+  ~critter,    ~tail, ~whisker,   ~mass,
+        NA, "length", "length", "grams",
+        NA,     "mm",     "mm",      NA,
+     "rat",     "71",     "12",    "91",
+   "mouse",     "58",      "8",    "47",
+    "vole",     "12",      "5",    "43"
+  )
+{% endhighlight %}
 
+The data in tibble form:
 
+{% highlight text %}
+> rodents
+# A tibble: 5 × 4
+  critter tail   whisker mass 
+  <chr>   <chr>  <chr>   <chr>
+1 NA      length length  grams
+2 NA      mm     mm      NA   
+3 rat     71     12      91   
+4 mouse   58     8       47   
+5 vole    12     5       43 
+{% endhighlight %}
 
-
-Earlier this month I saw a couple of waffle charts on Twitter used as a nice alternative to showing counts and proportions with bar graphs. 
-
-<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Bar charts are easy and precise. But they&#39;re boring as hell. If you need your chart to stand out, that&#39;s bad.<br><br>Waffle charts can be an eye-catching alternative. Especially, if you use icons. Use waffle charts to show counts or parts of a whole.<br><br>Here&#39;s how you build them. <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/RqhaxTeOLy">pic.twitter.com/RqhaxTeOLy</a></p>&mdash; Albert Rapp (@rappa753) <a href="https://twitter.com/rappa753/status/1567226189135364096?ref_src=twsrc%5Etfw">September 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a> week 36 Lego Bricks, data from <a href="https://t.co/1l8zxz3rpU">https://t.co/1l8zxz3rpU</a>, courtesy of <a href="https://twitter.com/geokaramanis?ref_src=twsrc%5Etfw">@geokaramanis</a>. <br><br>Waffle plot inspired by <a href="https://twitter.com/issa_madjid?ref_src=twsrc%5Etfw">@issa_madjid</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> code: <a href="https://t.co/7TLlBIL2gu">https://t.co/7TLlBIL2gu</a> <a href="https://t.co/N6SazCysof">pic.twitter.com/N6SazCysof</a></p>&mdash; Lee Olney (@leeolney3) <a href="https://twitter.com/leeolney3/status/1567009220389703680?ref_src=twsrc%5Etfw">September 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-##  
+Note the NAs padding the empty spaces.
   
+To fix messy names broken across rows, we tell `mash_colnames()` how many data rows have header fragments in them. In this case, it's **two*, the names don't count as data rows. The default separator in the function is the underscore, but we can change it to spaces or dots or whatever.
+
+{% highlight r %}
+rodents |> 
+  mash_colnames(n_name_rows = 2) # underscore is the default separator 
+{% endhighlight%}
   
+The data with fixed names:
+{% highlight text %}
+# A tibble: 3 × 4
+  critter tail_length_mm whisker_length_mm mass_grams
+  <chr>   <chr>          <chr>             <chr>     
+1 rat     71             12                91        
+2 mouse   58             8                 47        
+3 vole    12             5                 43        
+{% endhighlight %}
   
-Coincidentally, I had struggled with this a few months back for some freelance work and was meaning to document this alternative approach that uses [`ggsvg`](https://coolbutuseless.github.io/package/ggsvg/){:target="_blank"} to draw svg (Scalable Vector Graphics) image files arranged in a waffle-like grid. Using svg images has the advantage of us being able to map aesthetics such as size, fill, or color to different elements of the svg. This way we don’t need separate image files or icons if we only need them to vary in size or color.
-
-## A quick example:
-
-Let’s load some libraries and set up some example data in long format. In this case we have different regions and varying numbers of dogs of different age classes for each region.
-
+Pretty nice! No more unnecessary NAs.
+   
+In some cases we may recognize messy names or similar issues in a dataset, so we skip the first row. It may look like this, with automated names that do not mean anything.
 
 {% highlight r %}
-library(ggplot2) # CRAN v3.3.6
-library(ggsvg) # [github::coolbutuseless/ggsvg] v0.1.11
-library(forcats) # CRAN v0.5.1
-library(dplyr) # CRAN v1.0.10
-library(tidyr) # CRAN v1.2.1
-library(purrr) # CRAN v0.3.4
-library(glue) # CRAN v1.6.2
-
-dogs_long <- tibble(
-  Region = sample(c("South", "East", "Northwest", "West", "Unknown", "Southeast"),
-    size = 80,
-    replace = TRUE, prob = c(0.3, 0.4, 0.1, 0.2, 0.2, 0.3)
-  ),
-  Age_class = sample(c("Adult", "Puppy", "Not reported"), 80, replace = TRUE, prob = c(0.5, 0.3, 0.1))
-)
-
-dogs_long <- dogs_long %>%
-  slice_sample(prop = 0.8) %>%
-  group_by(Region) %>%
-  mutate(group_length = n())
+rodents_skip <- 
+tibble::tribble(
+        ~X1,      ~X2,       ~X3,     ~X4,
+  "critter",   "tail", "whisker",  "mass",
+         NA, "length",  "length", "grams",
+         NA,     "mm",      "mm",      NA,
+      "rat",     "71",      "12",    "91",
+    "mouse",     "58",       "8",    "47",
+     "vole",     "12",       "5",    "43"
+  )
+{% endhighlight %} 
+                
+{% highlight text %}
+> rodents_skip
+# A tibble: 6 × 4
+  X1      X2     X3      X4   
+  <chr>   <chr>  <chr>   <chr>
+1 critter tail   whisker mass 
+2 NA      length length  grams
+3 NA      mm     mm      NA   
+4 rat     71     12      91   
+5 mouse   58     8       47   
+6 vole    12     5       43                   
+{% endhighlight %}    
+    
+For cases like these, we can use the `keep_names` argument to ignore the names when we're mashing. In this case we work with **three** data rows, which hold all the pieces of the names.
+    
+Like so:  
+    
+{% highlight r %}
+rodents_skip |>
+  mash_colnames(n_name_rows = 3, keep_names = FALSE)
+{% endhighlight %} 
+    
+The result is the same as before.
+{% highlight text %}
+# A tibble: 3 × 4
+  critter tail_length_mm whisker_length_mm mass_grams
+  <chr>   <chr>          <chr>             <chr>     
+1 rat     71             12                91        
+2 mouse   58             8                 47        
+3 vole    12             5                 43        
 {% endhighlight %}
 
 
-If we want a multi-panel plot with the total number of dogs per region arranged in a waffle grid with one icon per observation, we can group the data by _Region_, calculate the group sizes, and create a named vector with this bit of information.
-
+### Ragged names
+    
+Let's set up the example data with the gaps in the names column. When there are gaps in the column names we tend to skip the names during the import step. The `keep_names` argument really comes in handy here.
+    
 {% highlight r %}
-group_lengths <- dogs_long %>%
-  distinct(Region, group_length) %>%
-  pull(group_length)
-names(group_lengths) <- dogs_long %>%
-  distinct(Region, group_length) %>%
-  pull(Region)
+surveys <- 
+tibble::tribble(
+         ~X1,        ~X2,        ~X3,        ~X4,      ~X5,       ~X6,
+   "opinion",      "age",         NA,         NA, "source",        NA,
+          NA, "15 to 19", "20 to 24", "25 to 29",  "local", "visitor",
+  "disliked",        "8",        "8",        "7",     "30",      "30",
+   "neutral",        "1",        "6",       "10",     "26",      "34",
+     "liked",       "11",        "6",        "3",     "15",      "45"
+  )
+{% endhighlight %} 
+
+{% highlight text %}
+> surveys
+# A tibble: 5 × 6
+  X1       X2       X3       X4       X5     X6     
+  <chr>    <chr>    <chr>    <chr>    <chr>  <chr>  
+1 opinion  age      NA       NA       source NA     
+2 NA       15 to 19 20 to 24 25 to 29 local  visitor
+3 disliked 8        8        7        30     30     
+4 neutral  1        6        10       26     34     
+5 liked    11       6        3        15     45         
+{% endhighlight %}
+           
+The approach is similar, and to deal with the gaps that imply a repeated value across columns, we use the `sliding_headers` argument. By setting it to `TRUE` we fill the gaps from left to right. 
+    
+{% highlight r %}
+surveys |> 
+  mash_colnames(2, keep_names = FALSE, sliding_headers = TRUE)
+{% endhighlight %} 
+
+The cleaned-up version is ready for further analysis.
+    
+{% highlight text %}
+# A tibble: 3 × 6
+  opinion  `age_15 to 19` `age_20 to 24` `age_25 to 29` source_local source_visitor
+  <chr>    <chr>          <chr>          <chr>          <chr>        <chr>         
+1 disliked 8              8              7              30           30            
+2 neutral  1              6              10             26           34            
+3 liked    11             6              3              15           45      
 {% endhighlight %}
 
-To arrange the points along an xy grid using `expand.grid()`, I borrowed some logic from the [`waffle`](https://git.rud.is/hrbrmstr/waffle.git){:target="_blank"} package and enforced some simple cutoff points for how many rows I wanted depending on the number of observations. I’m sure this can be improved upon. 
-
-{% highlight r %}
-# fn to arrange the points
-waff_arrange <- function(glength, gname) {
-  if (glength < 5) {
-    rows <- 1
-  } else if (glength >= 5 & glength <= 10) {
-    rows <- 2
-  } else {
-    rows <- 4
-  }
-  dat <- expand.grid(y = 1:rows, x = seq_len(ceiling(glength / rows)))[1:glength, ]
-  dat$glength <- glength
-  dat$category <- gname
-  dat
-# create the grid for these groups
-gridsxy <- map2_df(group_lengths, names(group_lengths), waff_arrange)
-}
-{% endhighlight %}
-
-With the grid set up, it can be bound to the original data (arranging first to keep the groups together). Then some minor preparation for the plotting can help, such as re-leveling factors and setting up labels. 
-
-{% highlight r %}
-dogsW <- dogs_long %>%
-  arrange(Region, group_length) %>%
-  bind_cols(arrange(gridsxy, category, glength)) %>%
-  ungroup()
-dogsW <- dogsW %>%
-  mutate(Age_class = fct_relevel(Age_class, c("Puppy", "Adult", "Not reported"))) %>%
-  mutate(Region_n = glue("{Region} ({glength})"))
-{% endhighlight %}
-
-To plot the xy data as points with a nicer distribution of space, we can draw them on top of a transparent grid from `geom_raster()`. This would be the basis of the waffle chart. This already shows the total number of dogs per region and the overall distribution by age class within each one.
-
-{% highlight r %}
-ggplot(dogsW)+
-  geom_raster(aes(x,y),fill="transparent")+
-  geom_point(aes(x, y,fill = Age_class,size=Age_class),pch=21)+
-  facet_wrap(~Region_n,scales = "free")
-{% endhighlight %}
-
-<figure>
-    <a href="/assets/images/waffpoints.png"><img src="/assets/images/waffpoints.png" ></a>
-        <figcaption>basic</figcaption>
-</figure>
-
-Next, we need an svg image. I downloaded this jumping dog (below) from [freesvg.org](https://freesvg.org/happy-running-dog-vector-image){:target="_blank"} into my working directory. Next,`ggsvg` needs this image as text, so we read its contents as a string.
-
-<figure>
-    <a href="/assets/images/dog.png"><img src="/assets/images/dog.png" ></a>
-        <figcaption>cute</figcaption>
-</figure>
-
-{% highlight r %}
-dog_svg <- paste(readLines("dognoclp.svg"), collapse = "\n")
-{% endhighlight %}
-
-For fun, let’s map the age class to the color of the dog’s collar. The `ggsvg` documentation explains that "we can use the `css()` helper function to target aesthetics at selected elements within an SVG using `css(selector, property = value)`".
-
-To identify the dog collar in the image, I opened the svg in a browser, used the Inspect Element tool, and copied the css selector that I needed.
-
-<figure>
-    <a href="/assets/images/dogcss.png"><img src="/assets/images/dogcss.png" ></a>
-        <figcaption>Inspecting elements</figcaption>
-</figure>
-
-This selector feeds into `geom_svg_point()` and as the `aesthetics` argument to `scale_svg_fill_manual()`. Point size can be mapped to age class, so that puppies appear smaller than adults, and the rest is some minor tweaking to get a nice look. For reference, this includes putting the legend at the bottom with the title above and the labels below. 
-
-{% highlight r %}
-ggplot(dogsW) +
-  geom_raster(aes(x, y), fill = "transparent") +
-  geom_point_svg(aes(x, y, css(
-    selector = "svg:nth-child(1) > path:nth-child(4)",
-    fill = Age_class
-  ), size = Age_class), svg = dog_svg) +
-  facet_wrap(~Region_n, scales = "free") +
-  scale_size_manual(values = c(12, 16, 14), name = "Age") +
-  scale_svg_fill_manual(
-    aesthetics =
-      css(selector = "svg:nth-child(1) > path:nth-child(4)", fill = Age_class),
-    values = c("#806cff", "#fdb731", "#194162"), name = "Age"
-  ) +
-  scale_x_continuous(expand = c(0, 0)) +
-  scale_y_continuous(expand = c(0, 0)) +
-  ggthemes::theme_few(base_family = "Lato") +
-  theme(
-    axis.text = element_blank(),
-    axis.ticks = element_blank(),
-    axis.title = element_blank(),
-    strip.text = element_text(face = "bold", size = 18),
-    legend.position = "bottom", legend.title = element_text(size = 16)
-  ) +
-  guides(size = guide_legend(
-    title.position = "top", label.position = "bottom",
-    title.hjust = 0.5
-  ))
-{% endhighlight %}
-
-<figure>
-    <a href="/assets/images/dogwaffles.png"><img src="/assets/images/dogwaffles.png" ></a>
-        <figcaption>Look at the little collars!</figcaption>
-</figure>
-
-Looks nice! Thanks to Mike FC for developing `ggsvg` and for help with understanding the `css()` function.
-
-All feedback welcome.
-
+That's it! Feel free to reach out with any questions/feedback or if I was using the wrong data-structuring terms for this. 
+    
