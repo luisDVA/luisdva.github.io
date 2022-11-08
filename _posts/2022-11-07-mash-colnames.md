@@ -14,22 +14,22 @@ header:
   image: /assets/images/featureMash.png
 ---
 
-Last this week I saw [Riva Quiroga](https://linktr.ee/rivaquiroga){:target="_blank"} masterfully import and clean a scary spreadsheet during an [RLadies meetup](https://vimeo.com/766089428){:target="_blank"}, and I recognized some common issues with other people’s data for which I have already written relevant functions. 
+Last week I saw [Riva Quiroga](https://linktr.ee/rivaquiroga){:target="_blank"} masterfully import and clean a scary spreadsheet during an [RLadies meetup](https://vimeo.com/766089428){:target="_blank"}, and I recognized some common issues with other people’s data for which I have already written relevant functions. 
 
-I also realized that I never wrote a dedicated post for the `mash_colnames` function in the [unheadr](https://unheadr.liomys.mx){:target="_blank"} package. This functionality has been around for a while now, but is worth describing in detail (plus I get to create some new teaching materials). Credit goes to [Jarret Byrnes](http://byrneslab.net){:target="_blank"}, who contributed the initial of the function in this [GitHub issue](https://github.com/luisDVA/unheadr/issues/4){:target="_blank"}. I just added some tidyeval and a few enhancements for a better fit within the package. Internally, `mash_colnames` pivots the column headers and the first _n_ rows of the data and ‘mashes’ whatever needs to be together columnwise.
+I also realized that I never wrote a dedicated post for the `mash_colnames` function in the [unheadr](https://unheadr.liomys.mx){:target="_blank"} package. This functionality has been around for a while now, but is worth describing in detail (plus I get to create some new teaching materials). Credit goes to [Jarret Byrnes](http://byrneslab.net){:target="_blank"}, who contributed the initial version of the function in this [GitHub issue](https://github.com/luisDVA/unheadr/issues/4){:target="_blank"}. I just added some tidyeval and a few enhancements for a better fit within the package. Internally, `mash_colnames` pivots the column headers and the first _n_ rows of the data and ‘mashes’ whatever needs to be together columnwise.
 
 
 `mash_colnames()` has two main uses. We can apply this nifty function to data with the following issues:
 
 
-## Data with the variable names split across > 1 rows (i.e. there are fragments of the headers are in the first few data rows) 
+## Data with the variable names split across > 1 rows (i.e. there are fragments of the headers in the first few data rows) 
 
 <figure>
     <a href="/assets/images/mashnolabs.png"><img src="/assets/images/mashnolabs.png" ></a>
         <figcaption>oh no</figcaption>
 </figure>
 
-This little example here with rodent data has different bits of the column headers spread out 'vertically' for some reason. This is quite common as far as I've seen. This next image below explains the problem a bit better. Notice that if there were any separators between the pieces of column headers, these are now implicit. 
+This little example here with rodent data has different bits of the column headers spread out 'vertically' for some reason. This is quite common, as far as I've seen. This next image below explains the problem a bit better. Notice that if there were any separators between the pieces of column headers, these are now implicit. 
 
 
 <figure>
@@ -47,7 +47,7 @@ Ultimately, we most likely are interested in something like this:
 
 ## Names split across >1 rows but with gaps in the headers at the very top 
 
-This happens when cells were originally merged in a spreadsheet or formatted table, or maybe the gaps are there intentionally to imply that the values along this row are the same until a new one appears. I’m not sure about the correct terms for this but [Charlie Hadley](https://www.visibledata.co.uk/about.html){:target="_blank"} referred to this as “non-regular spanning of column headers”
+This happens when cells were originally merged in a spreadsheet or formatted table, or maybe the gaps are there intentionally to imply that the values along this row are the same until a new one appears. I’m not sure about the correct terms for this but [Charlie Hadley](https://www.visibledata.co.uk/about.html){:target="_blank"} referred to this as “non-regular spanning of column headers”.
 
 <figure>
     <a href="/assets/images/ragged.png"><img src="/assets/images/ragged.png" ></a>
@@ -68,7 +68,7 @@ A more usable version of the data would look like this:
         <figcaption>nicer</figcaption>
 </figure>
 
-Having shown the two common issues that we can address with unheadr, let’s work through the same examples using code.
+Having shown the two common issues that we can address with `unheadr`, let’s work through the same examples using code.
 
 # Working with code
 
@@ -104,7 +104,7 @@ The data in tibble form:
 
 Note the NAs padding the empty spaces.
   
-To fix messy names broken across rows, we tell `mash_colnames()` how many data rows have header fragments in them. In this case, it's **two*, the names don't count as data rows. The default separator in the function is the underscore, but we can change it to spaces or dots or whatever.
+To fix messy names broken across rows, we tell `mash_colnames()` how many data rows have header fragments in them. In this case, it's **two**, the names don't count as data rows. The default separator in the function is the underscore, but we can change it to spaces or dots or whatever.
 
 {% highlight r %}
 rodents |> 
