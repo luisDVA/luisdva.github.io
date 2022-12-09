@@ -30,8 +30,8 @@ This course covers the key stages for cleaning messy data efficiently, including
 ***
 
 <figure class="half" style="display:flex">
-    <img src="/assets/images/AMMAC_Luis_Darcy.jpg"  style="width:50%">
-    <img src="/assets/images/latinr2022.jpeg"  style="width:60%">
+    <img src="/assets/images/AMMAC_Luis_Darcy.jpg"  style="width:40%">
+    <img src="/assets/images/latinr2022.jpeg"  style="width:40%">
 </figure>
 
 - Introducción a R mediante la visualización de datos. October 15 & 16, 2022. Chihuaha, Mexico._pre-conference workshop @ XV Congreso Nacional de Mastozoología._ [materials](https://github.com/luisDVA/cursoCNM2022){:target="_blank"}  
