@@ -29,7 +29,7 @@ This course covers the key stages for cleaning messy data efficiently, including
 ## Past courses, workshops, and tutorials
 ***
 
-<figure class="half">
+<figure class="half" style="display:flex">
     <img src="/assets/images/AMMAC_Luis_Darcy.jpg"  style="width:50%">
     <img src="/assets/images/latinr2022.jpeg"  style="width:60%">
 </figure>
