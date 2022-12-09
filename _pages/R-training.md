@@ -14,15 +14,6 @@ This page covers the various R courses and workshops that I have either develope
 - Since February of 2021 I am an RStudio Education Certified Trainer (`tidyverse` specialization). See my profile [here](https://education.rstudio.com/trainers/people/verde_arregoitia+luis/){:target="_blank"}.   
 - As of June 2022 I am a certified Carpentries [Instructor](https://carpentries.org/instructors/){:target="_blank"} (Software Carpentry).   
 
-## Upcoming courses
-[Getting the most out of R](https://www.physalia-courses.org/courses-workshops/gmr/) (2nd Edition)  
-Scheduled for October 2022, Spots still available.  
-
-_Course overview_  
-  
-  
-Many scientists start using R for very specific purposes with little training in computer science, data organization, and software development. Even advanced users may bypass important tools and abstractions which can ultimately lead to bad habits and wasting time. Get the most of R by exploring topics that usually fall outside of data analysis and visualization curricula.
-This course will cover blind spots in existing materials by working through the intermediate steps in various pairs of problems and solutions that often get overlooked because of assumed knowledge.
 
 ### On demand courses
 My [Data Cleaning with R](https://rfortherestofus.com/courses/data-cleaning/) course is available through [R for the Rest of Us](https://rfortherestofus.com).
@@ -38,13 +29,30 @@ This course covers the key stages for cleaning messy data efficiently, including
 ## Past courses, workshops, and tutorials
 ***
 
+<figure class="half">
+    <img src="/assets/images/AMMAC_Luis_Darcy.jpg">
+    <img src="/assets/images/LatinR2022.jpeg">
+</figure>
+
+- Introducción a R mediante la visualización de datos. October 15 & 16, 2022. Chihuaha, Mexico._pre-conference workshop @ XV Congreso Nacional de Mastozoología._ [materials](https://github.com/luisDVA/cursoCNM2022){:target="_blank"}  
+
+- Herramientas y atajos para programar eficientemente con Rstudio. October 10, 2022. Wokshop for LatinR 2022. [slides](https://luisdva.github.io/LatinR2022/){:target="_blank"}  
+
+[Getting the most out of R](https://www.physalia-courses.org/courses-workshops/gmr/) (2nd Edition)  
+October 3-6 2022 
+
+_Course overview_  
+  
+Many scientists start using R for very specific purposes with little training in computer science, data organization, and software development. Even advanced users may bypass important tools and abstractions which can ultimately lead to bad habits and wasting time. Get the most of R by exploring topics that usually fall outside of data analysis and visualization curricula. This course will cover blind spots in existing materials by working through the intermediate steps in various pairs of problems and solutions that often get overlooked because of assumed knowledge.
+
+
+
 - [Getting the most out of R](https://www.physalia-courses.org/previous-courses-workshops/2022/){:target="_blank"}. 4-day intensive course for Physalia Courses, February 2022 - 18 attendees from 10 countries. [materials](https://github.com/luisDVA/physalia-R){:target="_blank"}
  
  <figure class="half">
     <img src="/assets/images/slidesld.png">
     <img src="/assets/images/imagegtmor.jpg">
 </figure>
-
 
 - gg+: paquetes para extender las capacidades de `ggplot2`. Spanish-Language tutorial taught for LatinR 2021, 04/11/2021.  [materials](https://github.com/luisDVA/ggmas){:target="_blank"}  
 
