@@ -38,7 +38,7 @@ This course covers the key stages for cleaning messy data efficiently, including
 
 - Herramientas y atajos para programar eficientemente con Rstudio. October 10, 2022. Wokshop for LatinR 2022. [slides](https://luisdva.github.io/LatinR2022/){:target="_blank"}  
 
--[Getting the most out of R](https://www.physalia-courses.org/courses-workshops/gmr/) (2nd Edition)  
+- [Getting the most out of R](https://www.physalia-courses.org/courses-workshops/gmr/) (2nd Edition)  
 October 3-6 2022 
 
 _Course overview_: Many scientists start using R for very specific purposes with little training in computer science, data organization, and software development. Even advanced users may bypass important tools and abstractions which can ultimately lead to bad habits and wasting time. Get the most of R by exploring topics that usually fall outside of data analysis and visualization curricula. This course will cover blind spots in existing materials by working through the intermediate steps in various pairs of problems and solutions that often get overlooked because of assumed knowledge.
