@@ -15,8 +15,9 @@ Desde febrero de 2021 cuento con la certificación como [instructor](https://edu
 - Desde julio de 2021, mi curso para preparación y limpieza de datos "[Data Cleaning with R](https://rfortherestofus.com/courses/data-cleaning/)", se encuentra disponible en el sitio [R for the Rest of Us](https://rfortherestofus.com).
 
 
-## Cursos de R impartidos
+## Cursos y talleres impartidos
 ***
+- Regular Expressions and Working with Text Strings. _Taller para R-Ladies St. Louis_. February 22, 2023.[slides](https://luisdva.github.io/RLadiesSTLregex/){:target="_blank"} 
 
 - [Getting the most out of R](https://www.physalia-courses.org/previous-courses-workshops/2022/). Curso impartido para la organización Physalia Courses durante febrero 2022 - 18 Asistentes, 10 países. [materiales](https://github.com/luisDVA/physalia-R)
  
@@ -48,7 +49,7 @@ Desde febrero de 2021 cuento con la certificación como [instructor](https://edu
 </figure>
 
 
-## Ayudantía Docente (workshops)
+## Ayudantía Docente (talleres)
 
 - _Package Development_, impartido por Hadley Wickham. Octubre 2019.
 - _How to repeat yourself with purrr_, impartido por Jenny Bryan. Septiembre 2018.   
