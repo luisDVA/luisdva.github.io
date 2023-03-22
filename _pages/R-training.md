@@ -29,6 +29,8 @@ This course covers the key stages for cleaning messy data efficiently, including
 ## Past courses, workshops, and tutorials
 ***
 
+- Regular Expressions and Working with Text Strings. _Workshop for R-Ladies St. Louis_. February 22, 2023.[slides](https://luisdva.github.io/RLadiesSTLregex/){:target="_blank"}    
+
 <figure class="half" style="display:flex">
     <img src="/assets/images/AMMAC_Luis_Darcy.jpg"  style="width:30%">
     <img src="/assets/images/latinr2022.jpeg"  style="width:40%">
