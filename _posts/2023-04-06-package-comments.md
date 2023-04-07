@@ -13,7 +13,8 @@ tags:
 header: 
   overlay_color: "#5e616c"
   overlay_filter: "0.5"
-  image: /assets/images/featurePkgsH.png
+  overlay_image: /assets/images/featurePkgsH.png
+
 ---
 
 From small one-off scripts to massive interactive apps, most workflows use packages that help us extend the capabilities of a programming language. Sometimes we only need some example data or a few additional functions. Other times we want to add grammars, data structures, printing methods, graphical devices, or OOP programming systems.
