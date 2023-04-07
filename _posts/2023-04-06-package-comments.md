@@ -12,6 +12,7 @@ tags:
   - code comments
 header: 
   overlay_color: "#5e616c"
+  overlay_filter: "0.5"
   image: /assets/images/featurePkgsH.png
 ---
 
@@ -53,7 +54,7 @@ library(castor) # Efficient Phylogenetics on Large Trees, CRAN v1.7.8
 
 The two made up packages were `xonkicks` and `labbo`.
 
-To easily create code comments about the package load calls in a script, we can use the annotater package (read more about the package here). The functions build code comments using information already supplied by a package in its DESCRIPTION file or within its internal lists of functions and bundled datasets. This can be quite helpful for sharing code online, teaching, or making sense of existing scripts. 
+To easily create code comments about the package load calls in a script, we can use the annotater package (read more about the package here). The functions build code comments using information already supplied by a package in its **DESCRIPTION** file or within its internal lists of functions and bundled datasets. This can be quite helpful for sharing code online, teaching, or making sense of existing scripts. 
 
 At present, annotater can add the following details to package load calls in scripts or markdown (Rmd/Qmd) files:
 - package title
@@ -66,11 +67,11 @@ The number of possible package annotations has grown thanks to feedback and comm
 
 ## What are people commenting about their loaded packages?
 
-With so much public code available, it is now possible to search for .R, .Rmd and .Qmd files online, look for package load calls (e.g., library(data.table)), and then check for code comments after these lines (e.g., library(data.table) # dev version). 
+With so much public code available, it is now possible to search for .R, .Rmd and .Qmd files online, look for package load calls (e.g., `library(data.table)`), and then check for code comments after these lines (e.g., `library(data.table) # using dev version`). 
 
 A good source of data for this can be the weekly GitHub snapshots available on Google’s BigQuery cloud platform. This 3TB+ dataset includes the content of 163 million files, all searchable with regular expressions.
 
-This [post](https://towardsdatascience.com/top-100-most-used-r-functions-on-github-9caf2b81b314){:target="_blank"} by [Vlad Kozhevnikov](https://github.com/v-kozhevnikov){:target="_blank"} explains how to wrute SQL for BigQuery to select the IDs of all relevant files and then select content of R files. After that we can run another query to search the script contents for code comments after `library()` calls. 
+This [post](https://towardsdatascience.com/top-100-most-used-r-functions-on-github-9caf2b81b314){:target="_blank"} by [Vlad Kozhevnikov](https://github.com/v-kozhevnikov){:target="_blank"} explains how to write SQL for BigQuery to select the IDs of all relevant files and then select content of R files. After that we can run another query to search the script contents for code comments after `library()` calls. 
 
 The queries for .R files look like this (change with your respective BigQuery project, dataset, and table names). I repeated this for .R, .Rmd, and .Qmd files.
 
@@ -155,7 +156,7 @@ Even with this small sample we can already see some patterns and shared themes i
 - Which function or functions from the package are being used
 - Pipes
 
-Skimming the comments, a decent proportion of them are describing what a package was used for in general or mentioning the functions or datasets of interest. 22% of all comments start with the words “for”, “para”, and “pour” (case insensitive). Here’s another random sample:
+Skimming the comments, a decent proportion of them are describing what a package was used for in general or mentioning the functions or datasets of interest. 22% of all comments start with the words “_for_”, “_para_”, and “_pour_” (case insensitive). Here’s another random sample:
 
 |pkgname    |comment                                               |
 |:----------|:-----------------------------------------------------|
@@ -198,7 +199,7 @@ We can even group the data by package find the most commented packages. For refe
 |data.table |  60|
 |lubridate  |  55|
 
-Many of these are tidyverse packages and sometimes the comments made note of that. I did not look at when these scripts are from, but they seem to cover and make note of important changes such as the melt/cast-gather/spread-pivot transition.  See some comments for tidyr that mention reshaping in general
+Many of these are tidyverse packages and sometimes the comments made note of that. I did not look at when these scripts are from, but they seem to cover and make note of important changes such as the _melt/cast-gather/spread-pivot_ transition.  See some comments for `tidyr` that mention reshaping in general:
 
 |pkgname |comment                                                                              |
 |:-------|:------------------------------------------------------------------------------------|
@@ -213,7 +214,7 @@ Many of these are tidyverse packages and sometimes the comments made note of tha
 |tidyr   |this library contains the function that we'll need in order to reshape the dataframe |
 
 
-I had noted there are comments in different languages, so we can try to identify them with Google's Compact Language Detector as implemented in the cld3 pacakge. The function is vectorized and easy to use. 
+I had noted there are comments in different languages, so we can try to identify them with Google's Compact Language Detector as implemented in the `cld3` pacakge. The function is vectorized and easy to use. 
 
 
 commentLanguage |    n| percent|
@@ -248,7 +249,7 @@ The vast majority of annotations appear to be in English, followed by Norwegian,
 |curl             |Descargar desde internet                                                |
  
 
-I particularly like the comment “creo que ni la usé” or “I think I didn’t even use this package”) because it makes the tools from annotater seem helpful. If I have a big script and am unsure whether or not I used a function or dataset from a package, the addins can check that for me. 
+I particularly like the comment “_creo que ni la usé_” or “_I think I didn’t even use this package_” because it makes the tools from `annotater` seem helpful. If I have a big script and am unsure whether or not I used a function or dataset from a package, the addins can check that for me. 
 
 
 As a quick exercise, here are seven comments sampled randomly for five of the packages in the data drawn as network graphs. I think that even without labeling the package name we could figure out what each one is based on the comments.
