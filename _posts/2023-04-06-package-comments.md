@@ -93,6 +93,7 @@ WHERE REGEXP_CONTAINS(content, r'library\(.*\)[ \t]?#')
 
 {% endhighlight %}
 
+> Many thanks to fellow instructors Steve Condylios and Amit Kohli for pointing me in the right direction!
 
 My latest query found **500,641** .R files, **44,839** Rmd, and **242** Qmd files in the [GitHub Data](https://console.cloud.google.com/marketplace/product/github/github-repos){:target="_blank"} snapshot (March 14, 2023) of which **3968** included at least one code comment after a `library()` call.
 
