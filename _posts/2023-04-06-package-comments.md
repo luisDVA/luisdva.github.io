@@ -54,7 +54,7 @@ library(castor) # Efficient Phylogenetics on Large Trees, CRAN v1.7.8
 
 The two made up packages were `xonkicks` and `labbo`.
 
-To easily create code comments about the package load calls in a script, we can use the annotater package (read more about the package here). The functions build code comments using information already supplied by a package in its **DESCRIPTION** file or within its internal lists of functions and bundled datasets. This can be quite helpful for sharing code online, teaching, or making sense of existing scripts. 
+To easily create code comments about the package load calls in a script, we can use the annotater package (read more about the package [here](https://annotater.liomys.mx){:target="_blank"}). The functions build code comments using information already supplied by a package in its **DESCRIPTION** file or within its internal lists of functions and bundled datasets. This can be quite helpful for sharing code online, teaching, or making sense of existing scripts. 
 
 At present, annotater can add the following details to package load calls in scripts or markdown (Rmd/Qmd) files:
 - package title
