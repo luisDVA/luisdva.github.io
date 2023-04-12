@@ -16,6 +16,10 @@ header:
   
 ---
 
+> This post was discussed in the Rweekly Highlights [Podcast](https://rweekly.fireside.fm/) (Episode 118). Listen [here](https://share.fireside.fm/episode/87RSVeFz+jyb2gyBW){:target="_blank"}.
+
+***
+
 From small one-off scripts to massive interactive apps, most workflows use packages that help us extend the capabilities of a programming language. Sometimes we only need some example data or a few additional functions. Other times we want to add grammars, data structures, printing methods, graphical devices, or OOP programming systems.
 
 Rather than only working interactively, it helps to use scripts and save our source code for repeatability and transparency. When we need something from a package that fits our needs, we generally call this package from a script, so properly documenting how we use packages within scripts can make code easier to understand, debug, and share. 
@@ -227,7 +231,7 @@ commentLanguage |    n| percent|
 |es              |   88|    0.01|
 |ja              |   85|    0.01|
 
-The vast majority of annotations appear to be in English, followed by Norwegian, Portugese, French, Spanish, and Japanese. Because the comments are so brief and many include function names that aren’t real words, I highly doubt the accuracy some of these detected languages. Still, I was interested in the Spanish-language comments and I found some similar to what I’ve written in the past. It’s pretty interesting to see how people describe packages.
+The vast majority of annotations appear to be in English, followed by Norwegian, Portugese, French, Spanish, and Japanese. Because the comments are so brief and many include function names that aren’t real words, I highly doubt the accuracy some of these detected languages. I looked at some the comments that were supposedly in Norweigian and they were mostly short comments with function names and not words or sentences in any particular language. Still, I was interested in the Spanish-language comments and I found some similar to what I’ve written in the past. It’s pretty interesting to see how people describe packages.
 
 |pkgname          |comment                                                                 |
 |:----------------|:-----------------------------------------------------------------------|
