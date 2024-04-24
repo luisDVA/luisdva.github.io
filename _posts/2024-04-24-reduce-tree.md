@@ -12,12 +12,12 @@ tags:
   - phylogenetic
 header: 
   image: /assets/images/featureDoggen.png
-  overlay_filter: "0.2"
+  overlay_filter: "0.4"
 ---
 
 When plotting phylogenetic trees it is often useful to collapse and/or label clades for more informative figures. `ggtree` can do both, and this can be very useful for drawing large trees with taxonomic context and to avoid tiny+unreadable tip labels. Here’s a brief walkthrough:
 
-Lets use the caniform phylogeny bundled with geiger and work with genera for the labels and the collapsed nodes. This example is for genera, simply obtained by splitting the scientific names at the tree tips, but we can join the tabular representation of our trees with any other data containing higher taxonomic information (tribes, families, orders, etc).
+Lets use the caniform phylogeny bundled with `geiger` and work with genera for the labels and collapsed nodes. This example is for genera, simply obtained by splitting the scientific names at the tree tips, but we can join the tabular representation of our trees with any other data containing higher taxonomic information (tribes, families, orders, etc).
 
 
 {% highlight r %}
@@ -74,7 +74,7 @@ Our two outputs look like this (a randomly chosen example):
 {% endhighlight %}
 
 
-These various wrangling steps ultimately feed a wrapper function that gets the most recent common ancestors (MRCA) for our clades of interest. I took advantage of purrr::map2 to iterate through the two lists.
+These various wrangling steps ultimately feed a wrapper function that gets the most recent common ancestors (MRCA) for our clades of interest. I took advantage of `purrr::map2` to iterate through the two lists.
 
 {% highlight r %}
 # define function for getting MRCA node
@@ -136,11 +136,15 @@ collapse(canif_tree,node = 140,mode = "max",fill="transparent",
 Rather than repeating this call for all the nodes of interest using for loops, let's `reduce`, with the `canif_tree` ggtree object as the value for `.init` (so we collapse clades iteratively starting from here).
 
 The syntax can be confusing at first but I learned how to use reduce with these two posts, by 
-by June Choe:   
-[collapse repetitive piping with reduce](https://yjunechoe.github.io/posts/2020-12-13-collapse-repetitive-piping-with-reduce/)
-and Maëlle Salmon:  
-[Reducing my for loop usage with purrr::reduce()](https://masalmon.eu/2023/07/26/reduce/)  
+June Choe:   
 
+- [collapse repetitive piping with reduce](https://yjunechoe.github.io/posts/2020-12-13-collapse-repetitive-piping-with-reduce/)  
+
+and Maëlle Salmon:  
+  
+- [Reducing my for loop usage with purrr::reduce()](https://masalmon.eu/2023/07/26/reduce/)  
+
+  
 
 {% highlight r %}
 collapsed_tree <-   
@@ -158,7 +162,7 @@ collapsed_tree
         <figcaption>nice!</figcaption>
 </figure>
 
-If we want to label the genera using `geom_cladelab` instead, we can use `reduce2` and some nice anonymous formula notation. After that some minor tweaks to the space to let the labels show.
+If we want to label the genera using `geom_cladelab` instead, we can use `reduce2` and some nice anonymous formula notation. After that add some minor tweaks to the space to let the labels show.
 
 {% highlight r %}
 purrr::reduce2(
