@@ -11,7 +11,7 @@ tags:
   - caniformia
   - phylogenetic
 header: 
-  image: /assets/images/featureDoggen.png
+  overlay_image: /assets/images/featureDoggen.png
   overlay_filter: "0.4"
 ---
 
