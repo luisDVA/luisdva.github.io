@@ -15,16 +15,14 @@ header:
   overlay_filter: "0.4"
 ---
 
-Tidying tables with merged cells
-
 
 Tables created in word processing programs often use merged cells to group values. These cells can cause trouble when we want to work with the data in a programming context, regardless of how the tables were shared (.doc, .docx, PDF). 
 
 In R, we can get the data from Word files and PDFs into data frames thanks to packages such as `docxtractr`, `PDFtools`, `tablulizer`, and others (or even AI tools apparently), often preserving the original lines and structure which we can then wrangle into something usable. 
 
-This post shows a brief walkthrough for cleaning this type of table, based on my experience with real documents and showcasing a new helper function added to the unheadr package for version 0.4.0 (now on CRAN). 
+This post shows a brief walkthrough for cleaning this type of table, based on my experience with real documents and showcasing a new helper function added to the [`unheadr`](https://unheadr.liomys.mx){:target="_blank"} package for version 0.4.0 (now on CRAN). 
 
-This example is based on publicly available data with Information on income, property and property obligations for government officials in the Chukotka Autonomous Okrug, which is the easternmost federal subject of Russia. 
+This example is based on publicly available data with information on income, property and property obligations for government officials in the Chukotka Autonomous Okrug, which is the easternmost federal subject of Russia. 
 
 Various examples can be downloaded [here](https://чукотка.рф/vlast/pravitelstvo/svedeniya-o-dokhodakh-imushchestve-i-obyazatelstvakh-imushchestvennogo-kharaktera/){:target="_blank"}:
 
@@ -60,7 +58,7 @@ dtable <- docx_extract_tbl(sdoc, header = TRUE, preserve = TRUE)
 
 {% endhighlight %}
 
-To skip the download we could also recreate the output from the docxtractr stage with this code:
+To skip the download we could also recreate the output from `docx_extract_tbl()` stage with this code:
 
 {% highlight r %}
 dtable <- data.frame(
@@ -88,7 +86,7 @@ The output is ungainly, and everything that appears on separate lines within the
 2 Mavlyanovna I. "House\nPlot\n\nWarehouse\n\n"               "218.3\n6… "In u…
 {% endhighlight %}
 
-As a first step we can use the `squish_newlines()` function from `unheadr` to deduplicate and remove trailing line breaks, and because the rows in the initial table correspond to two different employees, the operation is grouped using the `.by` argument. 
+As a first step we can use the `squish_newlines()` function from `unheadr` to deduplicate and remove trailing line breaks, and because the rows in the initial table correspond to two different government officials, the operation is grouped using the `.by` argument. 
 
 {% highlight r %}
 dtable %>%
