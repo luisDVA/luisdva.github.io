@@ -201,7 +201,7 @@ samp_format[, 3]
 
 If we drop the FF from the color codes (it’s shorthand for 100% opacity), recent versions of R Studio will preview a color right in the editor, so now we know which values are green and which are black.
 
-"FF00B050" is <span style="background-color:#00B050">green</span> and FF000000 is <span style="background-color:black">black</span>
+"FF00B050" is <span style="background-color:#00B050">green</span> and "FF000000" is <span style="background-color:black">black</span>
 
 Let’s separate color code and weight value into their own columns:
 
@@ -296,7 +296,12 @@ names(sampjnd) <- str_remove(names(sampjnd), "_issue$")
 # ℹ Use `print(n = ...)` to see more rows
 {% endhighlight %} 
 
-If it’s not too late, following good practices for [Data organization in spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989){:target="_blank"}  will avoid a lot of pain. Otherwise, tools like the ones shown here can be useful.
+If it’s not too late, following good practices for [Data organization in spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989){:target="_blank"} will avoid a lot of pain. Otherwise, tools like the ones shown here can be useful.
 
 All feedback welcome and again thanks to Jeremy Selva for the idea and GitHub issue that sparked all of this.
 
+---
+
+**Further reading**:  
+- Jenny Bryan's [Spreadhseet Resources](https://github.com/jennybc/2016-06_spreadsheets)  
+- [Please don't do this](https://luisdva.github.io/pls-don%27t-do-this/): Three common bad practices in sharing tables and spreadsheets and how to avoid them  
