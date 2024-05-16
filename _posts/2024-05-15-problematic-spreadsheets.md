@@ -23,9 +23,9 @@ I’ve worked on this topic before, so I when I saw the post I had to meddle. I 
 The spreadsheet/workbook in question can be downloaded from Jeremy’s GitHub [here](https://raw.githubusercontent.com/JauntyJJS/jaunty-blogdown/main/content/blog/2024-02-15-Tackling-Formatted-Cell-Data/sample_excel.xlsx).
 
 For context, I’m reproducing the images from the original post about the issues with the data, which are good examples of: 
-## Things we shouldn’t do but which happen anyway in spreadsheets:
+## 😢 Things we shouldn’t do but which happen anyway in spreadsheets:
 
-### 1. A date variable with different cell formats, plus whatever strange thing that Excel does to dates.
+### 1. A date variable with different cell formats, plus whatever strange thing Excel does to dates.
 
 <figure>
     <a href="/assets/images/date_forms.png"><img src="/assets/images/date_forms.png" ></a>
@@ -136,7 +136,7 @@ Error in annotate_mf_all("sample_excel.xlsx") :
 
 If we run `annotate_mf_all()` with the path to the spreadsheet, we’ll get an error message. Apparently there are formatted cells outside of the data rectangle, which is what `readxl` focuses on during the data import.
 
-We can use tidyxl to unravel the problem, looking at the tail end of the output, we see some blank-formatted cells in rows 1054 and 1055, even though our samp data frame only has 1053 rows. These formatted cells create “ghost” rows that trip up the functions from unheadr.
+We can use tidyxl to unravel the problem, looking at the tail end of the output, we see some blank-formatted cells in rows 1054 and 1055, even though our samp data frame only has 1053 rows. These formatted cells create “ghost” rows that trip up the functions from `unheadr`.
 
 {% highlight text %}
 > nrow(samp)
@@ -201,7 +201,7 @@ samp_format[, 3]
 
 If we drop the FF from the color codes (it’s shorthand for 100% opacity), recent versions of R Studio will preview a color right in the editor, so now we know which values are green and which are black.
 
-<span style="background-color:#00B050">green</span> and <span style="background-color:black">black</span>
+"FF00B050" is <span style="background-color:#00B050">green</span> and FF000000 is <span style="background-color:black">black</span>
 
 Let’s separate color code and weight value into their own columns:
 
