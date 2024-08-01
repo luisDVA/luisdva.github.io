@@ -17,7 +17,7 @@ This page covers the various R courses and workshops that I have either develope
 - As of June 2022 I am a certified Carpentries [Instructor](https://carpentries.org/instructors/){:target="_blank"} (Software Carpentry).
 - rOpenSci Champions program [mentor](https://ropensci.org/champions/).
 
-***
+
 ## On demand courses
 My [Data Cleaning with R](https://rfortherestofus.com/courses/data-cleaning/) course is available through [R for the Rest of Us](https://rfortherestofus.com).
 
@@ -29,7 +29,7 @@ This course covers the key stages for cleaning messy data efficiently, including
 - Identifying and dealing with duplicate values
 - And much, much more!
 
-***
+
 ## Past courses, workshops, and tutorials
 
 - [A practical introduction to R](https://www.physalia-courses.org/courses-workshops/r-tidyverse/). Physalia Courses. 2-4 September 2024.
@@ -85,6 +85,7 @@ October 3-6 2022
     <img src="/assets/images/ldcnm18.png">
 </figure>
 
+***
 
 ## Teaching support at workshops
 
