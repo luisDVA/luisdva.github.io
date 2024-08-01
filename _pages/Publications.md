@@ -13,6 +13,14 @@ header:
 [Google Scholar profile](https://scholar.google.com.au/citations?user=Ii0dP6kAAAAJ&hl=en)
 
 
++ Soto Gomez, M., Brown, M.J.M., Pironon, S., Bureš, P., **Verde Arregoitia, L.D.**, Veselý, P., Elliott, T.L., Zedek, F., Pellicer, J., Forest, F., Nic Lughadha, E. & Leitch, I.J. 2024. Genome size is positively correlated with extinction risk in herbaceous angiosperms. _New Phytologist_. https://doi.org/10.1111/nph.19947
+
++ Garber, Paul A., Estrada, A., Shanee, S., Svensson, M.S. , **Verde Arregoitia, L.D.**, Nijman, V., Shanee, N., Gouveia, S.F., Nekaris, K.A.I., Chaudhary, A., Bicca-Marques, J.C., Hansen, M.F. 2024. Global wildlife trade and trafficking contribute to the world’s nonhuman primate conservation crisis. _Frontiers in Conservation Science_/. 5. DOI: 10.3389/fcosc.2024.1400613
+
++ Velásquez, K.L., Pérez-Maqueo, O.M., Hernández, R.E.G., **Verde Arregoita, L.D.** & Munguía-Carrara, M., 2024. A systematic review of the role of terrestrial vertebrates in ecological integrity assessment. _Environmental and Sustainability Indicators_. p.100426.
+
++ **Verde Arregoitia, L.D.** & Saravia Agulleiro M.J.M. 2023. Dime dónde andas y te diré cómo eres, así funciona la Evolución Convergente. _Therya ixmana_ 2.1: 12-14.
+
 + Hernández-Canchola, G., **Verde Arregoitia, L.D.**, Colunga-Salas, P., Gómez-Jiménez, Y.A., León-Paniagua, L. 2021. A Global Review of Phylogeographic Studies on Bats.  In: Lim B.K. et al. (eds) _50 Years of Bat Research_. Springer. 289-309
 
 + D’Elía, G., Canto, J., Ossa, G., **Verde Arregoitia, L.D.**, Bostelmann, E., Iriarte, A., Amador, L. Quiroga-Carmona, M., Hurtado, N., Cadenillas, R., Valdez, L. 2020. Lista actualizada de los mamíferos vivientes de Chile. _Boletín del Museo Nacional de Historia Natural_. 69(2). 67-98
