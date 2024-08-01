@@ -8,15 +8,27 @@ header:
   
 ---
 
-Work that I have presented at scientific meetings so far.
+Selected work that I have presented at scientific meetings so far.
 
-+ Verde Arregoitia, L.D. 2021. Incorporating 'gray' mammalian trait data into comparative studies. _100th Annual Meeting of the American Society of Mammalogists_. Virtual. (Part of the Symposium: Frontiers in Trait-based Mammalian Ecology) 
++ Verde Arregoitia, L.D. 2024. Why'd you load that package for?. _posit::conf(2024)_. Seattle, Washington, USA.
+
++ Verde Arregoitia, L.D. 2023. Mejorando los llamados a paquetes. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Montevideo, Uruguay.
+
++ Verde Arregoitia, L.D. 2022. La importancia del código fuente y el paquete annotater para añadir contexto sobre librerías adicionales. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual.  
+
++ Venegas Gutierrez, J. Miranda MonteAlegre, M. Verde Arregoitia L.D. 2022. Gestor Logístico para un sistema de bicicletas compartidas: Caso Santiago de Chile. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual.  
+
++ Verde Arregoitia, L.D. 2021. Más velocidad y menos colapsos: preprocesamiento de archivos con utilidades del sistema operativo. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual. [youtube](https://youtu.be/jQRQ31jCi24)
+
++ Verde Arregoitia, L.D. 2021. Incorporating 'gray' mammalian trait data into comparative studies. _100th Annual Meeting of the American Society of Mammalogists_. Virtual. (Part of the Symposium: Frontiers in Trait-based Mammalian Ecology)
 
 + Verde Arregoitia, L.D. 2020. Teaching Open Science through R Blogging. _Living Norway Colloquium 2020: Towards openness and transparency in applied ecology_. Trondheim, Norway (remote, [youtube link](https://www.youtube.com/watch?v=bn9kvCEKDnE))
 
 + Ación, L., _et al._ 2020. Communities of Practice in Latin America. R and Friends. _useR! 2020_. Virtual ([youtube link](https://www.youtube.com/watch?v=gtRntU2J3Cg&feature=youtu.be))
 
 + Verde Arregoitia, L.D. & Guillermo D'Elía. 2020. Patrones de convergencia ecomorfológica en roedores neotropicales. _Reunión Anual Conjunta, Sociedad de Biología de Chile -SOCEVOL_. Valdivia, Chile
+
++ Verde Arregoitia, L.D. 2019. De la zoología a las aplicaciones generales, unheadR: un paquete para estructurar datos no ordenados. Slides.. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Santiago, Chile.
 
 + Verde Arregoitia, L.D. & Guillermo D'Elía. 2019. Identifying Convergent Evolution in New World Rodents. _99th Annual Meeting of the American Society of Mammalogists_. Washington D.C., USA
 
