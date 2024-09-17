@@ -42,7 +42,7 @@ library(fs)      # CRAN v1.6.4
 data(gtcars) # get the data 
 {% endhighlight %}
 
-Now, we can group the data by country of orgin, year, and drive train and then a) split the data into a list of tibbles (one for each group), and b) use the group keys to build a vector of file names based on the grouping information used to split the data.
+Now, we can group the data by country of origin, year, and drive train and then a) split the data into a list of tibbles (one for each group), and b) use the group keys to build a vector of file names based on the grouping information used to split the data.
 
 
 {% highlight r %}
@@ -58,7 +58,7 @@ gtcars |>
   group_keys() 
 {% endhighlight %}
 
-After minor changes like replacing spaces, the vector of filenames can be done with rowwise glueing of the values in the grouping variables.
+After minor changes like replacing spaces, the vector of filenames can be built with rowwise glueing of the values in the grouping variables.
 
 
 {% highlight r %}
@@ -82,7 +82,7 @@ gtcars_groups <-
         \(x,y) write_csv(x,paste0("carfiles/",y,".csv")))
 {% endhighlight %}
 
-We should now have in our working directory a folder ("carfiles" in this example) full of csv files.
+We should now have in our working directory: a folder ("carfiles" in this example) full of csv files.
 
 Now let's write a function that will strip the filename, split it into fragments (one for each variable), and add these fragments as values into the data rectangle as part of the import step. Using `read.csv` here to get around guessing and type conversion.
 
@@ -114,7 +114,7 @@ filenameTovars <- function(filepath, var_names = NULL) {
 
 Nice little function above, it can take an optional vector with the names of the variables being added and if none are provided, it will use "v1", "v2", etc. Hard-coded "_" as separator here, but that could be an argument too.
 
-For one of the files chosen at random, let's compare the output from reading the csv normally vs appliying the new function with and without the vector of variable names.
+For one of the files chosen at random, let's compare the output from reading the csv normally vs applying the new function with and without the vector of variable names.
 
 
 {% highlight r %}
