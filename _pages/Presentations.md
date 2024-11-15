@@ -10,7 +10,9 @@ header:
 
 Selected work that I have presented at scientific meetings so far.
 
-+ Verde Arregoitia, L.D. 2024. Why'd you load that package for? _posit::conf(2024)_. Seattle, Washington, USA.
++ Verde Arregoitia, L.D. 2024. Ciencia de datos multilenguaje en un solo IDE de nueva generación. NERDEAR.LA México. CDMX.
+
++ Verde Arregoitia, L.D. 2024. Why'd you load that package for? _posit::conf(2024)_. Seattle, Washington, USA. [youtube](https://youtu.be/q4vmmlUEoQg?si=pZI68H-ZjTXXU2xo)
 
 + Verde Arregoitia, L.D. 2023. Mejorando los llamados a paquetes. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Montevideo, Uruguay.
 
