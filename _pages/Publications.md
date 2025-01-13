@@ -12,6 +12,8 @@ header:
 
 [Google Scholar profile](https://scholar.google.com.au/citations?user=Ii0dP6kAAAAJ&hl=en)
 
++ Martínez-Harms, M.J., Larraín-Barrios, B., **Verde Arregoitia, L.D.**, Gelcich, S., Alvarez, R.R., & Tecklin, D. (2024). Spatial assessment of risks faced by marine protected areas in Chilean Patagonia. Ecology and Society, 29(4).
+
 + Galán-Acedo, C., **Verde Arregoitia L.D.**, Arasa-Gisbert R., Auliz-Ortiz D., Saldivar-Burrola L.L., Gouveia S.F., Correia I., Rosete-Vergés F.A, Dinnage R., & Villalobos F. 2024. Global primary predictors of extinction risk in primates _Proc. R. Soc. B._ 29120241905 https://doi.org/10.1098/rspb.2024.1905
 
 + Soto Gomez, M., Brown, M.J.M., Pironon, S., Bureš, P., **Verde Arregoitia, L.D.**, Veselý, P., Elliott, T.L., Zedek, F., Pellicer, J., Forest, F., Nic Lughadha, E. & Leitch, I.J. 2024. Genome size is positively correlated with extinction risk in herbaceous angiosperms. _New Phytologist_. https://doi.org/10.1111/nph.19947
