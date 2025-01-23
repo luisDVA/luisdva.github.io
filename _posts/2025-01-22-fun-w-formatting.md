@@ -21,10 +21,12 @@ As a follow-up, this post summarizes patterns and prevalence of cell and text fo
 Before getting started, here is some recommended (mandatory) reading:
 
 - Six Tips for Better Spreadsheets. Perkel (2022). Nature [(PDF HERE)](https://edisciplinas.usp.br/pluginfile.php/7284787/mod_resource/content/1/Nature%202022%20PERKEL%20six%20tips%20for%20better%20spreadsheets.pdf){:target="_blank"}
- _This brief writeup features insights from lots of experts in the data community_ {: .notice--success}
+ _This brief writeup features insights from lots of experts in the data community_
+{: .notice--success}
 
 - Data Organization in Spreadsheets. Broman & Woo (2018). The American Statistician [(full text here)](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989){:target="_blank"}
-_THE definitive guide_ {: .notice--success}
+_THE definitive guide_
+{: .notice--success}
 
 ## The process
 
