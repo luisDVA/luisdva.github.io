@@ -21,10 +21,10 @@ As a follow-up, this post summarizes patterns and prevalence of cell and text fo
 Before getting started, here is some recommended (mandatory) reading:
 
 - Six Tips for Better Spreadsheets. Perkel (2022). Nature [(PDF HERE)](https://edisciplinas.usp.br/pluginfile.php/7284787/mod_resource/content/1/Nature%202022%20PERKEL%20six%20tips%20for%20better%20spreadsheets.pdf){:target="_blank"}
- _This brief writeup features insights from lots of experts in the data community_
+ _This brief writeup features insights from lots of experts in the data community_ {: .notice--success}
 
 - Data Organization in Spreadsheets. Broman & Woo (2018). The American Statistician [(full text here)](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989){:target="_blank"}
-_THE definitive guide_
+_THE definitive guide_ {: .notice--success}
 
 ## The process
 
@@ -126,7 +126,7 @@ Any (bold, italic, or both): **62%**
 
 This subset of ~3000 files is small compared with the entire corpus and the result of 62% of files using cell and text formatting is much higher than the 25% reported by Sing et al. [(2022)](https://arxiv.org/pdf/2208.06032){:target="_blank"} for a massive corpus of 1.8 million files examined. 
 
-Even if the real proportion of spreasheets with formatting is low, and especially formatting used to encode data, I still think it is worth finding ways to deal with it in R.
+Even if the real proportion of spreadsheets with formatting is low, and especially formatting used to encode data, I still think it is worth finding ways to deal with it in R.
 
 This is particulary relevent nowadays, as there is a growing need to transform complex documents into simpler representations that can be fed into large language models. We just need to look at how Microsoft recently released [markitdown](https://github.com/microsoft/markitdown){:target="_blank"}, a powerful python tool for converting various files to Markdown for indexing, text analysis, and other AI-related purposes. 
 
