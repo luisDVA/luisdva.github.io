@@ -11,9 +11,9 @@ header:
   image: /assets/images/featurepls.png
 ---
 
-As part of my ongoing work* with the joys of spreadsheets + formatting + R, this post explores the use of cell and text formatting in real-world spreadsheets at a large scale.
+As part of my ongoing work<sup>1</sup> with the joys of spreadsheets + formatting + R, this post explores the use of cell and text formatting in real-world spreadsheets at a large scale.
 
-* these [[1](https://luisdva.github.io/pls-don't-do-this/),[2](https://luisdva.github.io/rstats/spreadsheets-mf/),[3](https://luisdva.github.io/rstats/problematic-spreadsheets/),[4](https://github.com/luisdva/forgts)] entries document my ~~descent into insanity~~ journey towards making R play nice with messy spreadsheets.  
+<sup>1</sup> these [[1](https://luisdva.github.io/pls-don't-do-this/),[2](https://luisdva.github.io/rstats/spreadsheets-mf/),[3](https://luisdva.github.io/rstats/problematic-spreadsheets/),[4](https://github.com/luisdva/forgts)] entries document my ~~descent into insanity~~ journey towards making R play nice with messy spreadsheets.  
 
 As a follow-up, this post summarizes patterns and prevalence of cell and text formatting in thousands of real-world spreadsheets from different fields. I did this out of curiosity, but also to help me improve the functionality of my [unheadr](https://unheadr.liomys.mx/){:target="_blank"}  and [forgts](https://luisdva.github.io/forgts/){:target="_blank"}  packages, both of which are meant to help us work with formatted spreadsheets.
 
