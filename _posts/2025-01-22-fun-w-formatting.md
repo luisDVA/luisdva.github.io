@@ -24,7 +24,7 @@ Before getting started, here is some recommended (mandatory) reading:
  _This brief writeup features insights from lots of experts in the data community_
 
 - Data Organization in Spreadsheets. Broman & Woo (2018). The American Statistician [(full text here)](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989){:target="_blank"}
-_the definitive guide_
+_THE definitive guide_
 
 ## The process
 
@@ -49,7 +49,7 @@ Some of the files look like this:
 
 The forgts pacakge already has functions (derived from code in unheadr) to extract formatting data from spreadsheets. With slight modifications, these functions can then be used iteratively to process files and ultimately summarize the formatting in each file.
 
-The spreadsheets in Fuse are binary XLS files, so first we need to convert them xlsx using libreoffice through the command line so that tidyxl can pull the formatting data stored in the underlying XML. 
+The spreadsheets in Fuse are binary XLS files, so first we need to convert them to xlsx using libreoffice through the command line so that tidyxl can pull the formatting data stored in the underlying XML. 
 
 Internally, the functions call this system command whenever an input is not xlsx.
 
@@ -60,12 +60,9 @@ libreoffice --headless --convert-to xlsx myfile
 (another option could be to batch convert all binary files first)
 
 
-I checked some of the conversions and didn't notice any of the formatting breaking or being lost, I'm not sure but hopefully that's the case for all the files.
+I checked some of the conversions and didn't notice any of the formatting breaking or being lost. I'm not sure but hopefully that's the case for all the files. This implies having libreoffice installed and running the code with root privileges.
 
-This implies having libreoffice installed and running the code with root privileges.
-
-Several of the files were multisheet workbooks but the code only prcesses one sheet per file, sampled at random.
-
+Several of the files were multisheet workbooks but the code only processes one sheet per file, sampled at random.
 
 For a spreadsheet that looks like this:
 
@@ -106,19 +103,20 @@ $combined_overall_stats
 
 With two very long data frames that hold overall summaries and more detailed formatting information, some simple data operations can tell us that:
 
-Total files **3015**
+Total files: **3015**
 
-Files with formatting **1877**
+Files with formatting: **1877**
 
-Percentage of files with formatting **62%**
+Percentage of files with formatting: **62%**
 
-Mean percentage of cells formatted per sheet: *849%**
+Mean percentage of cells formatted per sheet: **49%**
 
 The most commonly used color (for text, borders, or cell fills) was blue (hex code #0000FF), used in 228 files
 
 In terms of text formatting (italic and bold text) that may or may not be used to encode data (e.g., bold text not just for emphasis but to indicate negative values), we get:
 
-Proportion of files using:
+Proportion of files using:  
+
 Bold only: **47%**;  
 Italic only: **2%**;  
 Both bold and italic: **%12**;   
@@ -130,7 +128,7 @@ This subset of ~3000 files is small compared with the entire corpus and the resu
 
 Even if the real proportion of spreasheets with formatting is low, and especially formatting used to encode data, I still think it is worth finding ways to deal with it in R.
 
-This is particulary relevent nowadays, as there is a growing n{:target="_blank"}eed to transform complex documents into simpler representations that can be fed into large language models. We just need to look at how Microsoft recently released [markitdown](https://github.com/microsoft/markitdown){:target="_blank"}, a powerful python tool for converting various files to Markdown for indexing, text analysis, and other AI-related purposes. 
+This is particulary relevent nowadays, as there is a growing need to transform complex documents into simpler representations that can be fed into large language models. We just need to look at how Microsoft recently released [markitdown](https://github.com/microsoft/markitdown){:target="_blank"}, a powerful python tool for converting various files to Markdown for indexing, text analysis, and other AI-related purposes. 
 
 I'll continue working on forgts to convert formatted spreadhsheets to gts, and hopefully also rewrite some of the functions in unheadr that paste the formatting information as strings when importing these kinds of files.
 
