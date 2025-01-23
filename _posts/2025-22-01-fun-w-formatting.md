@@ -124,7 +124,7 @@ Italic only: **2%**;
 Both bold and italic: **%12**;   
 Any (bold, italic, or both): **62%**
 
-___
+---
 
 This subset of ~3000 files is small compared with the entire corpus and the result of 62% of files using cell and text formatting is much higher than the 25% reported by Sing et al. [(2022)](https://arxiv.org/pdf/2208.06032){:target="_blank"} for a massive corpus of 1.8 million files examined. 
 
