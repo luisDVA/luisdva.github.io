@@ -12,6 +12,8 @@ header:
 
 [Google Scholar profile](https://scholar.google.com.au/citations?user=Ii0dP6kAAAAJ&hl=en)
 
++ Martinez-Harms, M.J., Larraín-Barrios, B., **Verde Arregoitia, L.D.**, Palma-Duque, J., and Gelcich, S. "Navigating ecosystem services trade-offs: A global comprehensive review." Ambio (2025): 1-19.
+
 + Martínez-Harms, M.J., Larraín-Barrios, B., **Verde Arregoitia, L.D.**, Gelcich, S., Alvarez, R.R., & Tecklin, D. (2024). Spatial assessment of risks faced by marine protected areas in Chilean Patagonia. Ecology and Society, 29(4).
 
 + Galán-Acedo, C., **Verde Arregoitia L.D.**, Arasa-Gisbert R., Auliz-Ortiz D., Saldivar-Burrola L.L., Gouveia S.F., Correia I., Rosete-Vergés F.A, Dinnage R., & Villalobos F. 2024. Global primary predictors of extinction risk in primates _Proc. R. Soc. B._ 29120241905 https://doi.org/10.1098/rspb.2024.1905
@@ -59,4 +61,4 @@ header:
 + Murray, K.A., **Verde Arregoitia, L.D.**., Davidson, A., Di Marco, M. & Di Fonzo, M.M.I. (2014) Threat to the point: improving the value of comparative extinction risk analysis for conservation action. _Global Change Biology_, 20: 483–494. DOI: 10.1111/gcb.12366
 
 
-+ **Verde Arregoitia L.D.**, Blomberg S.P., & Fisher D.O. (2013) Phylogenetic correlates of extinction risk in mammals: species in older lineages are not at greater risk._Proc R Soc B_ 280: 20131092. * Full text (Open Access) [here](http://rspb.royalsocietypublishing.org/content/280/1765/20131092.short).
++ **Verde Arregoitia L.D.**, Blomberg Simone .P., & Fisher D.O. (2013) Phylogenetic correlates of extinction risk in mammals: species in older lineages are not at greater risk._Proc R Soc B_ 280: 20131092. * Full text (Open Access) [here](http://rspb.royalsocietypublishing.org/content/280/1765/20131092.short).
