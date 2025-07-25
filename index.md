@@ -1,7 +1,5 @@
 ---
 layout: single
-header:
-  image: /assets/images/banner_1.jpg
 author_profile: true
 entries_layout: grid
 title: Welcome
