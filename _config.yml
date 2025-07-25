@@ -253,7 +253,7 @@ defaults:
 
 # Collections
 collections:
-  practices:
+ posts:
     output: true
 
 
