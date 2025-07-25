@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Luis D. Verde Arregoitia"
+title                    : "Kevin López-Reyes"
 title_separator          : "-"
-subtitle                 : "Personal Site - Home"
+subtitle                 : "Personal Site"
 name                     : "LDVA"
 description              : "Ecology.Evolution.Conservation.Data"
 url                      : https://luisdva.github.io
@@ -62,12 +62,11 @@ analytics:
     tracking_id          : UA-65540014-1
     anonymize_ip         : true
 
-
 # Site Author
 author:
-  name             : "Luis D. Verde Arregoitia"
+  name             : "Kevin López-Reyes"
   avatar           : assets/images/luisprfle.png
-  bio              : "data . ecology . evolution . conservation . biogeography . mammals"
+  bio              : "Lizards . Snakes . Macroecology . Macroevolution . Biogeography . ENM . SDM"
   location         : 
   email            :
   links:
