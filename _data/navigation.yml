@@ -2,13 +2,7 @@
 main:
  - title: "About"
    url: /about/
- - title: "All posts"
-   url: /posts/
  - title: "Publications"
    url: /Publications/
- - title: "Presentations"
-   url: /Presentations/
- - title: "R training"
-   url: /R-training/
- - title: "Cursos R"
-   url: /cursosR/
+ - title: "Resources"
+   url: /Resources/
