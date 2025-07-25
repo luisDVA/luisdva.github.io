@@ -2,7 +2,7 @@
 permalink: /about/
 title: "About me"
 header:
-  image:  /assets/images/featureAboutcopy.jpg
+  image:  /assets/images/IMG_2031.heic
 ---  
 
 
