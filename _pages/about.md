@@ -6,7 +6,7 @@ header:
 ---  
 
 
-## About me
+## Personal Profile
 Hi everyone, Kevin here. I am a Mexican PhD student at the National Autonomous University of Mexico (UNAM). I enjoy watching horror movies and anime, hiking, and I am a huge Coldplay fan. I am also studying japanese. おつかれさまです ! !
 
 ## Research
