@@ -6,7 +6,7 @@ permalink: /Publications/
 published: true
 share: false
 header: 
-  image: /assets/images/featurePub.jpg
+  image: /assets/images/pubs_banner.jpg
 
 ---
 
