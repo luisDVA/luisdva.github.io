@@ -5,9 +5,6 @@ title: Publications
 permalink: /Publications/
 published: true
 share: false
-header: 
-  image: /assets/images/pubs_banner.jpg
-
 ---
 
 [Google Scholar profile](https://scholar.google.com/citations?user=5S9qAwkAAAAJ&hl=es)
