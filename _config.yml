@@ -18,12 +18,12 @@ minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "Kevin López-Reyes"
 title_separator          : "-"
-subtitle                 : "Personal Site"
-name                     : "LDVA"
-description              : "Ecology.Evolution.Conservation.Data"
-url                      : https://luisdva.github.io
+subtitle                 : "Personal website"
+name                     : "KLR"
+description              : "Ecology.Evolution.Reptiles"
+url                      : https://kevinlopezreyes.github.io
 baseurl                  : "/"
-repository               : "luisdva/luisdva.github.io"
+repository               : "kevinlopezreyes/kevinlopezreyes.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -42,7 +42,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : "LuisDVerde"
+  username               : "kevinlopezreyes"
 facebook:
   username               :
   app_id                 :
@@ -70,34 +70,29 @@ author:
   location         : 
   email            :
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://liomys.mx"
-    - label: "Twitter"
+
+    - label: "X"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/luisdverde/"
+      url: "https://x.com/lopezreyeska"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/luisdva/"
-    - label: "Web of Science"
-      icon: "fas fa-user-check"
-      url: "https://www.webofscience.com/wos/author/record/1594058"
+      url: "https://github.com/kevinlopezreyes"
     - label: "ResearchGate"
       icon: "fab fa-fw fa-researchgate"
-      url: "https://www.researchgate.net/profile/Luis_Verde_Arregoitia"
+      url: "https://www.researchgate.net/profile/Kevin-Lopez-Reyes?ev=hdr_xprf"
     - label: "Google Scholar"
       icon: "fab fa-fw fa-google"
-      url: "https://scholar.google.com/citations?&user=Ii0dP6kAAAAJ"
+      url: "https://scholar.google.com/citations?user=5S9qAwkAAAAJ&hl=es"
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
+    - label: "X"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/luisdverde/"
+      url: "https://x.com/lopezreyeska"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/luisdva/"
+      url: "https://github.com/kevinlopezreyes"
 
 
 # Reading Files
