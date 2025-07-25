@@ -2,11 +2,10 @@
 layout: single
 classes: wide
 title: Publications
-permalink: /Publications/
+permalink: /publications/
 published: true
 share: false
 ---
-
 [Google Scholar profile](https://scholar.google.com/citations?user=5S9qAwkAAAAJ&hl=es)
 
 # 2025
