@@ -83,6 +83,9 @@ author:
     - label: "Google Scholar"
       icon: "fab fa-fw fa-google"
       url: "https://scholar.google.com/citations?user=5S9qAwkAAAAJ&hl=es"
+    - label: "Bluesky"
+      icon: "fab fa-fw Bluesky"
+      url: "https://bsky.app/profile/lopezreyeska.bsky.social"
 
 # Site Footer
 footer:
@@ -93,6 +96,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/kevinlopezreyes"
+    - label: "Bluesky"
+      icon: "fab fa-fw Bluesky"
+      url: "https://bsky.app/profile/lopezreyeska.bsky.social"
 
 
 # Reading Files
