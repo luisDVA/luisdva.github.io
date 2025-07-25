@@ -2,8 +2,9 @@
 title: "Practice 1: Biological data"
 date: 2025-07-01
 categories: [practices]
+layout: single
+author_profile: false
 ---
-
 # Practice 1
 
 <div class="code-block">
