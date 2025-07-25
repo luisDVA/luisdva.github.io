@@ -226,11 +226,12 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: false
       comments: false
       share: true
       related: true
+      show_copy_button: true
   # _pages
   - scope:
       path: "_pages"
