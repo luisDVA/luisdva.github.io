@@ -10,7 +10,7 @@ header:
 
 ---
 
-[Google Scholar profile]([https://scholar.google.com.au/citations?user=Ii0dP6kAAAAJ&hl=en](https://scholar.google.com/citations?user=5S9qAwkAAAAJ&hl=es))
+[Google Scholar profile](https://scholar.google.com/citations?user=5S9qAwkAAAAJ&hl=es)
 
 # 2025
 + **López-Reyes, K**., Kass, J., Yañez-Arenas, C. & Villalobos, F. (2025). Historical biogeography and climatic niche dynamics in spiny lizards of the genus *Sceloporus* (Squamata: Phrynosomatidae). Biological Journal of the Linnean Society. [SUBMITTED]
