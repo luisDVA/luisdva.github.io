@@ -72,7 +72,7 @@ author:
   links:
 
     - label: "X"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-twitter"
       url: "https://x.com/lopezreyeska"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
