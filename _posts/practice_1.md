@@ -8,7 +8,7 @@ author_profile: false
 # Practice 1
 
 <div class="code-block">
-  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  <button class="copy-button" onclick="copyCode(this)">Primer ejemplo</button>
   <pre><code class="language-r">
 # Primer ejemplo en R
 x <- c(1, 2, 3)
@@ -17,7 +17,7 @@ mean(x)
 </div>
 
 <div class="code-block">
-  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  <button class="copy-button" onclick="copyCode(this)">Segundo ejemplo</button>
   <pre><code class="language-r">
 # Segundo ejemplo en R
 y <- c(10, 20, 30)
