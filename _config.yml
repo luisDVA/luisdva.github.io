@@ -253,7 +253,7 @@ defaults:
 
 # Collections
 collections:
-  practicas:
+  practices:
     output: true
 
 
