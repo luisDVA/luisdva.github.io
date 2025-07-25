@@ -31,7 +31,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 words_per_minute         :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : true
+search                   : false
 search_full_content      : false 
 search_provider          : lunr
 # SEO Related
