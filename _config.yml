@@ -23,7 +23,7 @@ subtitle                 : "Personal website"
 name                     : "KLR"
 description              : "Ecology.Evolution.Reptiles"
 url                      : https://kevinlopezreyes.github.io
-baseurl                  : "/"
+baseurl                  : ""
 repository               : "kevinlopezreyes/kevinlopezreyes.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
