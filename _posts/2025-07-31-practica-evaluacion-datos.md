@@ -26,10 +26,10 @@ objetivo de esta práctica es comparar tipos de partición de datos,
 evaluando cómo cada enfoque maneja la autocorrelación espacial entre los
 datos de entrenamiento y validación, así como su efecto en las métricas.
 
-# Datos
+# Descargar archivos
+Descargar la carpeta del proyecto [aqui](https://drive.google.com/drive/folders/1rlSLD5f-CssSEgztnzTlzS7Z_KUywj8z?usp=drive_link)
 
 ## Carga de datos biológicos y ambientales
-
 ``` r
 # Leer datos biológicos
 datos <- read.csv("occs/OCCS_lw.csv")
