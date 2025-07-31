@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Práctica: Partición de Datos y Evaluación de Modelos "
+title: "Partición de Datos y Evaluación de Modelos "
 author: "M. Jimena G. Burgos"
 date: 2025-07-31
 categories: [practice]
@@ -18,8 +18,8 @@ show_date: true # Asegura que la fecha se muestre
 ---
 # Introducción
 
-En esta práctica utilizaremos los registros de la especie Leopardus
-wiedii, la paquetería ENMEval 2.0 (Kass et. al 2025) y el algoritmo
+En esta práctica utilizaremos los registros de la especie *Leopardus
+wiedii*, la paquetería ENMEval 2.0 (Kass *et. al* 2025) y el algoritmo
 MaxEnt (Phillips et al. 2006) para explorar diferentes métodos de
 partición de datos en la modelación de distribución de especies. El
 objetivo de esta práctica es comparar tipos de partición de datos,
@@ -77,9 +77,9 @@ utilizadas para calibrarlo.
 Principalmente, al trabajar con conjuntos de datos relativamente
 pequeños (e.g. 25 registros de presencia), los usuarios pueden optar la
 validación cruzada k-fold, en el que el número de bins (k) o grupos es
-igual al número de registros de presencia (n) (Pearson et al., 2007;
+igual al número de registros de presencia (n) (Pearson *et al*., 2007;
 Shcheglovitova y Anderson, 2013). Esto se conoce como partición
-jackknife o “dejar uno fuera” (Hastie et al., 2009).
+jackknife o “dejar uno fuera” (Hastie *et al*., 2009).
 
 ``` r
 jack <- get.jackknife(occs, bg)
@@ -105,7 +105,7 @@ e.mx_jack <- ENMevaluate(occs = occs, #Registros de presencia
 
 El método de «k-fold aleatorio» divide aleatoriamente los registros de
 presencia en un número de (k) bins o grupos especificado por el usuario
-(Hastie et al., 2009). Este método es ideal utilizarlo con conjuntos de
+(Hastie *et al*., 2009). Este método es ideal utilizarlo con conjuntos de
 registros de presencia grandes.
 
 ``` r
