@@ -46,7 +46,7 @@ plot(envs[[3]])
 points(occs, pch = 19)
 ```
 
-![](assets/images/datos-biologicos-1.png)
+![](/assets/images/datos-biologicos-1.png)
 
 ## Carga de capa de sesgo
 
@@ -79,7 +79,7 @@ plot(biaslayer, main = "Capa de sesgo")
 points(bg, pch=3 , cex = 0.4, col="white")
 ```
 
-![](assets/images/capa-sesgo-1.png)
+![](/assets/images/capa-sesgo-1.png)
 
 ## Función pROC
 
@@ -119,7 +119,7 @@ jack <- get.jackknife(occs, bg)
 evalplot.grps(pts = occs, pts.grp = jack$occs.grp, envs = envs)
 ```
 
-![](assets/images/jackknife-particion-1.png)
+![](/assets/images/jackknife-particion-1.png)
 
 ``` r
 # Corremos el modelo
@@ -146,7 +146,7 @@ rand <- get.randomkfold(occs, bg, k = 5) #En este caso elegimos 5
 evalplot.grps(pts = occs, pts.grp = rand$occs.grp, envs = envs)
 ```
 
-![](assets/images/randomkfold-particion-1.png)
+![](/assets/images/randomkfold-particion-1.png)
 
 ``` r
 # Corremos el modelo
@@ -202,7 +202,7 @@ evalplot.grps(pts = occs, pts.grp = block$occs.grp, envs = envs) +
   ggplot2::ggtitle("Spatial block partitions: occurrences")
 ```
 
-![](assets/images/bloques-visualizacion-1.png)
+![](/assets/images/bloques-visualizacion-1.png)
 
 ``` r
 # bloques de background
@@ -210,7 +210,7 @@ evalplot.grps(pts = bg, pts.grp = block$bg.grp, envs = envs) +
   ggplot2::ggtitle("Spatial block partitions: background")
 ```
 
-![](assets/images/bloques-visualizacion-2.png)
+![](/assets/images/bloques-visualizacion-2.png)
 
 ``` r
 # Corremos el modelo
@@ -245,14 +245,14 @@ cb1 <- get.checkerboard(occs, envs, bg,
 evalplot.grps(pts = occs, pts.grp = cb1$occs.grp, envs = envs)
 ```
 
-![](assets/images/checkerboard1-particion-1.png)
+![](/assets/images/checkerboard1-particion-1.png)
 
 ``` r
 # visualizamos background
 evalplot.grps(pts = bg, pts.grp = cb1$bg.grp, envs = envs)
 ```
 
-![](assets/images/checkerboard1-particion-2.png)
+![](/assets/images/checkerboard1-particion-2.png)
 
 ``` r
 # Corremos el modelo
@@ -290,14 +290,14 @@ cb2 <- get.checkerboard(occs, envs, bg, aggregation.factor=c(10,10))
 evalplot.grps(pts = occs, pts.grp = cb2$occs.grp, envs = envs)
 ```
 
-![](assets/images/checkerboard2-particion-1.png)
+![](/assets/images/checkerboard2-particion-1.png)
 
 ``` r
 # visualizamos background
 evalplot.grps(pts = bg, pts.grp = cb2$bg.grp, envs = envs)
 ```
 
-![](assets/images/checkerboard2-particion-2.png)
+![](/assets/images/checkerboard2-particion-2.png)
 
 ``` r
 # Corremos el modelo
@@ -396,7 +396,7 @@ ggplot(data_long, aes(x = Tipo_particion, y = Valor, color = Tipo_particion, fil
         legend.position = "none")
 ```
 
-![](assets/images/grafico-metricas-1.png)
+![](/assets/images/grafico-metricas-1.png)
 
 # Visualización de modelos
 
@@ -456,7 +456,7 @@ plot(pred.seq_kfold, main="Random-k-fold")
 plot(pred.seq_check1, main="Checkerboard básico")
 ```
 
-![](assets/images/mapas-finales-1.png)
+![](/assets/images/mapas-finales-1.png)
 
 ``` r
 par(mfrow=c(1, 2))
@@ -464,4 +464,4 @@ plot(pred.seq_check2, main="Checkerboard jerárquico")
 plot(pred.seq_jack, main="Jackknife")
 ```
 
-![](assets/images/mapas-finales-2.png)
+![](/assets/images/mapas-finales-2.png)
