@@ -66,6 +66,7 @@ bg <- xyFromCell(envs[[3]], sample(celdas_validas, n.bg, prob = vals_capa[celdas
 # graficar los puntos de bg
 plot(envs[[3]], main = "")
 points(bg, pch = 3 , cex = 0.4, col = "white")
+colnames(bg) <- colnames(occs)
 ```
 ![](/assets/images/bg.png)
 
