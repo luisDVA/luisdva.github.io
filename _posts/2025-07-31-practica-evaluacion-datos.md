@@ -32,7 +32,7 @@ Descargar la carpeta del proyecto [aqui](https://drive.google.com/drive/folders/
 ## Carga de datos biológicos y ambientales
 ``` r
 # Leer datos biológicos
-datos <- read.csv("occs/OCCS_lw.csv")
+datos <- read.csv("occs/occs_lw.csv")
 occs <- datos[,c("long","lat")]
 
 # Listar archivos .tif en la carpeta "envs" dentro del proyecto 
