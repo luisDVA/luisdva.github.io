@@ -53,7 +53,11 @@ envs <- rast(envs.files)
 # Graficamos para ver los registros
 plot(envs[[3]])
 points(occs, pch = 19)
+```
+![](/assets/images/datos-biologicos-1.png)
 
+## Generamos los puntos de bg
+``` r
 n.bg <- 1000 # número de puntos de bg
 vals_capa <- values(envs[[3]]) # Obtener los valores del raster
 celdas_validas <- which(!is.na(vals_capa)) # Encuentra las celdas que NO son NA
@@ -63,8 +67,7 @@ bg <- xyFromCell(envs[[3]], sample(celdas_validas, n.bg, prob = vals_capa[celdas
 plot(envs[[3]], main = "")
 points(bg, pch = 3 , cex = 0.4, col = "white")
 ```
-
-![](/assets/images/datos-biologicos-1.png)
+![](/assets/images/bg.png)
 
 ## Función pROC
 
