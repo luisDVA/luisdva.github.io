@@ -29,6 +29,16 @@ datos de entrenamiento y validación, así como su efecto en las métricas.
 # Descargar archivos
 Descargar la carpeta del proyecto [aqui](https://drive.google.com/drive/folders/1rlSLD5f-CssSEgztnzTlzS7Z_KUywj8z?usp=drive_link)
 
+## Cargamos los paquetes de R
+``` r
+library(ENMeval)
+library(terra)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(kuenm)
+```
+
 ## Carga de datos biológicos y ambientales
 ``` r
 # Leer datos biológicos
@@ -43,6 +53,15 @@ envs <- rast(envs.files)
 # Graficamos para ver los registros
 plot(envs[[3]])
 points(occs, pch = 19)
+
+# definir los puntos de background
+n.bg <- 1000 # este sera la cantidad de puntos de background 
+bg <- xyFromCell(envs[[3]], 
+                 sample(ncell(envs[[3]]),
+                        n.bg, prob=values(envs[[3]]))) %>% as.data.frame()
+colnames(bg) <- colnames(occs)
+head(bg)
+
 ```
 
 ![](/assets/images/datos-biologicos-1.png)
