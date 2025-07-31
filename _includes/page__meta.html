@@ -1,15 +1,31 @@
 {% assign document = post | default: page %}
-{% if document.read_time or document.show_date %}
+{% if document.read_time or document.show_date or document.author %} {# Añadimos 'or document.author' aquí #}
   <p class="page__meta">
     {% if document.show_date and document.date %}
       {% assign date = document.date %}
       <span class="page__meta-date">
         <i class="far {% if include.type == 'grid' and document.read_time and document.show_date %}fa-fw {% endif %}fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="{{ date | date_to_xmlschema }}">{{ date | date: "%B %-d, %Y" }}</time>
+        <time datetime="{{ date | date_to_xmlschema }}">{{ date | date: "%d %B %Y" }}</time> {# Cambié el formato de fecha para que sea más como tu screenshot #}
       </span>
     {% endif %}
 
-    {% if document.read_time and document.show_date %}<span class="page__meta-sep"></span>{% endif %}
+    {# AÑADIMOS ESTA SECCIÓN PARA EL AUTOR JUSTO AQUÍ #}
+    {% if document.author %}
+      <span class="page__meta-author">
+        {% if document.show_date and document.date %}<span class="page__meta-sep"></span>{% endif %} {# Agrega un separador solo si también hay fecha #}
+        <i class="fas fa-user" aria-hidden="true"></i>
+        {% assign author = document.author %}
+        {% if site.data.authors[author] %} {# Si usas el sistema _data/authors.yml #}
+          {% assign author_name = site.data.authors[author].name %}
+        {% else %} {# Si es solo una cadena de texto en el Front Matter #}
+          {% assign author_name = author %}
+        {% endif %}
+        <span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ author_name }}">{{ author_name }}</span>
+      </span>
+    {% endif %}
+    {# FIN DE LA SECCIÓN DE AUTOR #}
+
+    {% if document.read_time and document.show_date or document.author %}<span class="page__meta-sep"></span>{% endif %} {# Ajusta el separador para el tiempo de lectura #}
 
     {% if document.read_time %}
       {% assign words_per_minute = document.words_per_minute | default: site.words_per_minute | default: 200 %}
