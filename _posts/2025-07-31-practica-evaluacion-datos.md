@@ -454,4 +454,4 @@ plot(pred.seq_check2, main="Checkerboard jerárquico")
 plot(pred.seq_jack, main="Jackknife")
 ```
 
-![](Practica2_Evaluacion_files/figure-markdown_github/mapas-finales-2.png)
+![](assets/images/mapas-finales-2.png)
