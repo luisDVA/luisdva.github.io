@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "Práctica: Particiones de Datos y Evaluación de Modelos de Distribución de Especies"
+title: "Práctica: Partición de Datos y Evaluación de Modelos "
 author: "M. Jimena G. Burgos"
-date: 2025-07-31 14:30:00 -0500 # Hora de Mérida, Yucatán
+date: 2025-07-31
 categories: [practice]
 permalink: /resources/practica-evaluacion-datos/ # Esta será la URL de tu post
 toc: true # Activa la Tabla de Contenido
@@ -26,7 +26,7 @@ objetivo de esta práctica es comparar tipos de partición de datos,
 evaluando cómo cada enfoque maneja la autocorrelación espacial entre los
 datos de entrenamiento y validación, así como su efecto en las métricas.
 
-# Calibración
+# Datos
 
 ## Carga de datos biológicos y ambientales
 
@@ -47,39 +47,6 @@ points(occs, pch = 19)
 ```
 
 ![](/assets/images/datos-biologicos-1.png)
-
-## Carga de capa de sesgo
-
-``` r
-### Cargamos una capa de sesgo para dirigir los puntos de background
-biasfile = rast("biaslayer/biaslayer_HREFBiv.tif")
-biaslayer <- biasfile
-# Es necesario que no existan NAs en el raster
-# Por lo que asignamos un valor de 0 a los NAs
-values(biasfile)[is.na(values(biasfile))] <- 0
-n.bg <- 1000 # este sera la cantidad de puntos de background 
-bg <- xyFromCell(biasfile, 
-                 sample(ncell(biasfile),
-                        n.bg, prob=values(biasfile))) %>% as.data.frame()
-colnames(bg) <- colnames(occs)
-head(bg)
-```
-
-    ##        long      lat
-    ## 1 -89.89583 21.22917
-    ## 2 -89.81250 18.31250
-    ## 3 -89.22917 18.68750
-    ## 4 -87.97917 19.10417
-    ## 5 -88.43750 19.68750
-    ## 6 -88.10417 20.97917
-
-``` r
-# Graficamos los puntos de background sobre la capa de sesgo
-plot(biaslayer, main = "Capa de sesgo")
-points(bg, pch=3 , cex = 0.4, col="white")
-```
-
-![](/assets/images/capa-sesgo-1.png)
 
 ## Función pROC
 
