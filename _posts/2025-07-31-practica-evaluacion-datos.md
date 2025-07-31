@@ -5,6 +5,16 @@ author: "M. Jimena G. Burgos"
 date: 2025-07-31 14:30:00 -0500 # Hora de Mérida, Yucatán
 categories: [practice]
 permalink: /resources/practica-evaluacion-datos/ # Esta será la URL de tu post
+toc: true # Activa la Tabla de Contenido
+toc_label: "Contenidos de la Práctica" # Título de la TOC
+toc_icon: "fa-solid fa-book" # Icono para la TOC
+toc_sticky: true # Hace que la TOC se mantenga visible al hacer scroll
+toc_levels: 1..3 # Muestra encabezados H1, H2, H3 en la TOC
+author_profile: true # Muestra el perfil del autor configurado en _config.yml
+read_time: true # Muestra el tiempo de lectura estimado
+comments: false # Desactiva comentarios si no los quieres
+share: true # Activa botones de compartir
+show_date: true # Asegura que la fecha se muestre
 ---
 # Introducción
 
