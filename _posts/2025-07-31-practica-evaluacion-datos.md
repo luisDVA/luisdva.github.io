@@ -54,6 +54,8 @@ envs <- rast(envs.files)
 plot(envs[[3]])
 points(occs, pch = 19)
 
+# Es necesario que no existan NAs en el raster
+values(biasfile)[is.na(values(biasfile))] <- 0
 # definir los puntos de background
 n.bg <- 1000 # este sera la cantidad de puntos de background 
 bg <- xyFromCell(envs[[3]], 
