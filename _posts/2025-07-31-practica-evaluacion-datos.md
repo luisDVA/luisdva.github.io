@@ -74,9 +74,7 @@ utilizadas para calibrarlo.
 ### Jackknife (leave-one-out)
 
 Principalmente, al trabajar con conjuntos de datos relativamente
-pequeños (e.g. 25 registros de presencia), los usuarios pueden optar la
-validación cruzada k-fold, en el que el número de bins (k) o grupos es
-igual al número de registros de presencia (n) (Pearson *et al*., 2007;
+pequeños (e.g. 25 registros de presencia; Pearson *et al*., 2007;
 Shcheglovitova y Anderson, 2013). Esto se conoce como partición
 jackknife o “dejar uno fuera” (Hastie *et al*., 2009).
 
