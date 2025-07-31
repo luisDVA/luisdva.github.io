@@ -54,17 +54,14 @@ envs <- rast(envs.files)
 plot(envs[[3]])
 points(occs, pch = 19)
 
-# Es necesario que no existan NAs en el raster
-values(envs)[is.na(values(envs))] <- 0
+n.bg <- 1000 # número de puntos de bg
+vals_capa <- values(envs[[3]]) # Obtener los valores del raster
+celdas_validas <- which(!is.na(vals_capa)) # Encuentra las celdas que NO son NA
+bg <- xyFromCell(envs[[3]], sample(celdas_validas, n.bg, prob = vals_capa[celdas_validas], replace = TRUE)) %>% as.data.frame()
 
-# definir los puntos de background
-n.bg <- 1000 # este sera la cantidad de puntos de background 
-bg <- xyFromCell(envs[[3]], 
-                 sample(ncell(envs[[3]]),
-                        n.bg, prob=values(envs[[3]]))) %>% as.data.frame()
-colnames(bg) <- colnames(occs)
-head(bg)
-
+# graficar los puntos de bg
+plot(envs[[3]], main = "")
+points(bg, pch = 3 , cex = 0.4, col = "white")
 ```
 
 ![](/assets/images/datos-biologicos-1.png)
