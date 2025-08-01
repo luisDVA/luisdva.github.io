@@ -236,6 +236,7 @@ evalplot.grps(pts = occs, pts.grp = cb1$occs.grp, envs = envs)
 
 ``` r
 # visualizamos background
+cb1$bg.grp <- cb1$bg.grp[1:nrow(bg)]
 evalplot.grps(pts = bg, pts.grp = cb1$bg.grp, envs = envs)
 ```
 
