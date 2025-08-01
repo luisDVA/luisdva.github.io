@@ -22,9 +22,8 @@ En esta práctica utilizaremos los registros de la especie *Leopardus
 wiedii*, la paquetería ENMEval 2.0 (Kass *et al*., 2025) y el algoritmo
 MaxEnt (Phillips *et al*., 2006) para explorar diferentes métodos de
 partición de datos en la modelación de distribución de especies. El
-objetivo de esta práctica es comparar tipos de partición de datos,
-evaluando cómo cada enfoque maneja la autocorrelación espacial entre los
-datos de entrenamiento y validación, así como su efecto en las métricas.
+objetivo de esta práctica es comparar diferentes métodos partición de datos,
+así como su efecto en las métricas de evaluación.
 
 # Descargar archivos
 Descargar la carpeta del proyecto [aqui](https://drive.google.com/drive/folders/1rlSLD5f-CssSEgztnzTlzS7Z_KUywj8z?usp=drive_link)
