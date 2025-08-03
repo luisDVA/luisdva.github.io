@@ -263,7 +263,7 @@ de presencia y background se asignan a cada grupo según su ubicación en
 el patrón jerárquico resultante.
 
 ``` r
-cb2 <- get.checkerboard(occs, envs, bg, aggregation.factor=c(10,10))
+cb2 <- get.checkerboard2(occs, envs, bg, aggregation.factor=c(10,10))
 # visualizamos presencias
 evalplot.grps(pts = occs, pts.grp = cb2$occs.grp, envs = envs)
 ```
