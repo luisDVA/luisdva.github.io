@@ -19,7 +19,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "en-US"
 title                    : "Kevin López-Reyes"
 title_separator          : "-"
-subtitle                 : "Personal website"
+subtitle                 : "Academic site"
 name                     : "KLR"
 description              : "Ecology.Evolution.Reptiles"
 url                      : https://kevinlopezreyes.github.io
