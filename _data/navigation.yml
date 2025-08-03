@@ -1,10 +1,10 @@
 # Site navigation links
 main:
- - title: "About"
-   url: /about/
- - title: "Publications"
-   url: /publications/
- - title: "Resources"
-   url: /resources/
-- title: "Photos"
-   url: /photos/
+  - title: "About"
+    url: /about/
+  - title: "Publications"
+    url: /publications/
+  - title: "Resources"
+    url: /resources/
+  - title: "Photos"
+    url: /photos/
