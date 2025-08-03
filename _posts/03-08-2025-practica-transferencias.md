@@ -16,7 +16,6 @@ comments: false # Desactiva comentarios si no los quieres
 share: true # Activa botones de compartir
 show_date: true # Asegura que la fecha se muestre
 ---
-
 # Transferencias (KUENM, MOP, procedimientos de transferencia))
 En esta práctica exploraremos los diferentes procedimientos de
 transferencia (Truncación, Extrapolación y Clamping). El objetivo es ver
@@ -322,4 +321,5 @@ plot(mop_res)
 # ¿CÓMO CAMBIAN LAS CURVAS DE RESPUESTA?
 
 # ¿QUÉ PROCEDIMIENTO DE TRANSFERENCIA USARIAN DEPENDIENDE DEL ESCENARIO?
+
 
