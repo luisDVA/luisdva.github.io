@@ -6,5 +6,5 @@ main:
    url: /publications/
  - title: "Resources"
    url: /resources/
-  - title: "Photos"
+- title: "Photos"
    url: /photos/
