@@ -146,7 +146,7 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-
+enable_copy_code_button: true
 
 # Markdown Processing
 kramdown:
