@@ -260,10 +260,13 @@ points(occs_ind_spatvector, pch = 16, cex = 1, col = "red")
 ### CURVAS DE RESPUESTA
 Extrapolación
 ![](/assets/images/plot_e_pt.png)
+
 Extrapolación con clamping
 ![](/assets/images/plot_ec_pt.png)
+
 No extrapolación o truncación
 ![](/assets/images/plot_ne_pt.png)
+
 
 ## Podemos evaluar el modelo en la zona de transferencia
 ``` r
@@ -316,3 +319,4 @@ mop_res <- mop(M_stack = mvars_stack, G_stack = gvars_stack, percent = 10,
 plot(mop_res)
 ```
 ![](/assets/images/plot_8_pt.png)
+
