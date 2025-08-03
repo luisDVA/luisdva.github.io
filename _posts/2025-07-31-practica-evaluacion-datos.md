@@ -8,7 +8,7 @@ permalink: /resources/practica-evaluacion-datos/ # Esta será la URL de tu post
 toc: true # Activa la Tabla de Contenido
 toc_label: "Contenidos de la Práctica" # Título de la TOC
 toc_icon: "fa-solid fa-book" # Icono para la TOC
-toc_sticky: true # Hace que la TOC se mantenga visible al hacer scroll
+toc_sticky: false # Hace que la TOC se mantenga visible al hacer scroll
 toc_levels: 1..3 # Muestra encabezados H1, H2, H3 en la TOC
 author_profile: true # Muestra el perfil del autor configurado en _config.yml
 read_time: true # Muestra el tiempo de lectura estimado
