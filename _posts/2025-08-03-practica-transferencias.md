@@ -29,7 +29,6 @@ Nicaragua, Guatemala, El Salvador, Honduras, Belize, Costa Rica, Panama,
 pero introducida en Florida (Uetz *et al*., 2025).
 
 # PRIMERO CARGAREMOS LOS PAQUETES
-
 ``` r
 library(tidyverse) # Manipulación, transformación de datos.
 library(sf) # Trabajar con datos vectoriales.
@@ -40,11 +39,8 @@ library(ggplot2) # Creación de gráficos
 library(terra)
 library(ntbox)
 ```
-
 # EXPLORAMOS LOS DATOS
-
 ## REGISTROS DE PRESENCIA
-
 ``` r
 # Cargar registros de presencia
 occs_train <- read_csv("occ_train.csv")
@@ -72,13 +68,10 @@ ggplot() +
                                 "Invasor" = "Invasor"),
                      breaks = c("Entrenamiento", "Validacion", "Invasor"))
 ```
-
-![](prac_2_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](prac_2_files/figure-markdown_github/plot_1_pt.png)
 
 ## VARIABLES AMBIENTALES
-
 ### ZONA NATIVA
-
 ``` r
 # cargamos las variables
 vars_nat_stack <- rast(list.files(path = "M_var/set_1", pattern = "\\.asc$", 
@@ -90,24 +83,23 @@ plot(vars_nat_stack)
 # BIO12 = Annual Precipitation
 # BIO15 = Precipitation Seasonality
 ```
+![](prac_2_files/figure-markdown_github/plot_2_pt.png)
 
 ### ZONA DE INVASIÓN
-
 ``` r
 # cargamos las variables
 vars_inv_stack <- rast(list.files(path = "G_var/set_1/set_1", pattern = "\\.asc$", 
                                   full.names = TRUE))
 plot(vars_inv_stack)
 ```
+![](prac_2_files/figure-markdown_github/plot_3_pt.png)
+
 
 # CORREMOS LOS MODELOS
-
 En esta sección, vamos a construir modelos con todas las combinaciones
 posibles entre tipos de respuesta, multiplicadores de regularización y
 sets de variables. Pero primero necesitamos definir los argumentos.
-
 ## Calibracion del modelo
-
 ``` r
 # Nombre del archivo con todos los registros de presencia nativos
 occ_joint <- "occ_joint.csv"
@@ -136,9 +128,9 @@ kuenm_cal(occ.joint = occ_joint, occ.tra = occ_tra, M.var.dir = M_var_dir,
           batch = batch_cal, out.dir = out_dir, reg.mult = reg_mult, f.clas = f_clas, 
           maxent.path = maxent_path, wait = wait, run = run)
 ```
+![](prac_2_files/figure-markdown_github/plot_4_pt.png)
 
 ## Evaluación y selección de los mejores modelos
-
 ``` r
 # Archivo que usaremos para evaluar nuestros modelos candidatos
 occ_test <- "occ_test.csv"
@@ -162,7 +154,6 @@ cal_eval <- kuenm_ceval(path = out_dir, occ.joint = occ_joint, occ.tra = occ_tra
 ```
 
 ## ¿Cuantos mejores modelos obtuvimos?
-
 ``` r
 # cargamos los resultados de la evaluación
 best_mod <- read_csv("Calibration_results/selected_models.csv")
@@ -173,7 +164,6 @@ print(best_mod$Model)
 ```
 
 ## construimos el modelo final (aquí transferimos)
-
 ``` r
 # Nombre que tendrá el archivo batch (igual que en la calibración)
 batch_fin <- "final_models"
@@ -212,11 +202,8 @@ kuenm_mod(occ.joint = occ_joint, M.var.dir = M_var_dir, out.eval = out_eval,
 ```
 
 # VISUALIZAMOS LOS MODELOS
-
 ## GEOGRAFICAMENTE
-
 ### EN LA ZONA NATIVA
-
 ``` r
 # Nativos
 raster_ne_nativo <- rast("Final_Models/M_2_F_l_set_1_NE/Ctenosaura_similis_avg.asc")
@@ -228,9 +215,9 @@ occs_joint_spatvector <- vect(occs_joint, geom=c("lon", "lat"), crs = "EPSG:4326
 plot(raster_ne_nativo, main = "NE", axes = FALSE, legend = TRUE) 
 points(occs_joint_spatvector, pch = 16, cex = 0.5, col = "red")
 ```
+![](prac_2_files/figure-markdown_github/plot_5_pt.png)
 
 ### EN LA ZONA DE INVASIÓN
-
 ``` r
 # Invasores
 raster_ec_invasor <- rast("Final_Models/M_2_F_l_set_1_EC/Ctenosaura_similis_set_1_avg.asc")
@@ -249,13 +236,11 @@ points(occs_ind_spatvector, pch = 16, cex = 1, col = "red")
 plot(raster_ne_invasor, main = "NE", axes = FALSE, legend = TRUE)
 points(occs_ind_spatvector, pch = 16, cex = 1, col = "red")
 ```
+![](prac_2_files/figure-markdown_github/plot_6_pt.png)
 
 ### CURVAS DE RESPUESTA
-
 CARGAR IMAGENES
-
 ## Podemos evaluar el modelo en la zona de transferencia
-
 ``` r
 occs_inv <- read_csv("occ_ind.csv") %>%
             dplyr::select(longitude = lon, latitude = lat)
@@ -287,11 +272,10 @@ eval <- rbind.data.frame(E_ev, EC_ev)
 
 ggplot() + geom_boxplot(data = eval, aes(x = tipo_ext, y = auc_ratio))
 ```
+![](prac_2_files/figure-markdown_github/plot_7_pt.png)
 
 # ANALISIS DE EXTRAPOLACIÓN
-
 ## CORRER EL MOP
-
 ``` r
 # cargamos las variables
 mvars_stack <- raster::stack(list.files(path = "M_var/set_1", pattern = "\\.asc$", 
@@ -303,26 +287,22 @@ mop_res <- mop(M_stack = mvars_stack, G_stack = gvars_stack, percent = 10,
 ```
 
 ## VISUALIZARLO
-
 ``` r
 plot(mop_res)
 ```
+![](prac_2_files/figure-markdown_github/plot_8_pt.png)
 
-# EJERCICIO PARA USTEDES, IMAGINEMOS QUE EL SITIO NATIVO DE C. ES FLORIDA E INVADIÓ MEXICO
+# EJERCICIO PARA USTEDES
 
-# Y CENTROAMERICA.. ¿CÓMO SE VEN LOS RESULTADOS?
+IMAGINEMOS QUE EL SITIO NATIVO DE *C. similis* ES FLORIDA E INVADIÓ MEXICO Y CENTROAMERICA.. ¿CÓMO SE VEN LOS RESULTADOS?
 
-# PREGUNTAS ¿EN QUÉ ESCENARIO SE PREDICE MEJOR LA INVASIÓN?
+# PREGUNTAS 
+¿EN QUÉ ESCENARIO SE PREDICE MEJOR LA INVASIÓN?
 
-# ¿QUÉ CAMBIA EN LAS MÉTRICAS DE EVALUACIÓN?
+¿QUÉ CAMBIA EN LAS MÉTRICAS DE EVALUACIÓN?
 
-# ¿CÓMO CAMBIA EL MOP?
+¿CÓMO CAMBIA EL MOP?
 
-# ¿CÓMO CAMBIAN LAS CURVAS DE RESPUESTA?
+¿CÓMO CAMBIAN LAS CURVAS DE RESPUESTA?
 
-# ¿QUÉ PROCEDIMIENTO DE TRANSFERENCIA USARIAN DEPENDIENDE DEL ESCENARIO?
-
-
-
-
-
+¿QUÉ PROCEDIMIENTO DE TRANSFERENCIA USARIAN DEPENDIENDE DEL ESCENARIO?
