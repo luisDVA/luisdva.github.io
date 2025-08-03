@@ -68,7 +68,7 @@ ggplot() +
                                 "Invasor" = "Invasor"),
                      breaks = c("Entrenamiento", "Validacion", "Invasor"))
 ```
-![](prac_2_files/figure-markdown_github/plot_1_pt.png)
+![](/assets/images/plot_1_pt.png)
 
 ## VARIABLES AMBIENTALES
 ### ZONA NATIVA
@@ -83,7 +83,7 @@ plot(vars_nat_stack)
 # BIO12 = Annual Precipitation
 # BIO15 = Precipitation Seasonality
 ```
-![](prac_2_files/figure-markdown_github/plot_2_pt.png)
+![](/assets/images/plot_2_pt.png)
 
 ### ZONA DE INVASIÓN
 ``` r
@@ -92,7 +92,7 @@ vars_inv_stack <- rast(list.files(path = "G_var/set_1/set_1", pattern = "\\.asc$
                                   full.names = TRUE))
 plot(vars_inv_stack)
 ```
-![](prac_2_files/figure-markdown_github/plot_3_pt.png)
+![](/assets/images/plot_3_pt.png)
 
 
 # CORREMOS LOS MODELOS
@@ -128,7 +128,7 @@ kuenm_cal(occ.joint = occ_joint, occ.tra = occ_tra, M.var.dir = M_var_dir,
           batch = batch_cal, out.dir = out_dir, reg.mult = reg_mult, f.clas = f_clas, 
           maxent.path = maxent_path, wait = wait, run = run)
 ```
-![](prac_2_files/figure-markdown_github/plot_4_pt.png)
+![](/assets/images/plot_4_pt.png)
 
 ## Evaluación y selección de los mejores modelos
 ``` r
@@ -215,7 +215,7 @@ occs_joint_spatvector <- vect(occs_joint, geom=c("lon", "lat"), crs = "EPSG:4326
 plot(raster_ne_nativo, main = "NE", axes = FALSE, legend = TRUE) 
 points(occs_joint_spatvector, pch = 16, cex = 0.5, col = "red")
 ```
-![](prac_2_files/figure-markdown_github/plot_5_pt.png)
+![](/assets/images/plot_5_pt.png)
 
 ### EN LA ZONA DE INVASIÓN
 ``` r
@@ -236,7 +236,7 @@ points(occs_ind_spatvector, pch = 16, cex = 1, col = "red")
 plot(raster_ne_invasor, main = "NE", axes = FALSE, legend = TRUE)
 points(occs_ind_spatvector, pch = 16, cex = 1, col = "red")
 ```
-![](prac_2_files/figure-markdown_github/plot_6_pt.png)
+![](/assets/images/plot_6_pt.png)
 
 ### CURVAS DE RESPUESTA
 CARGAR IMAGENES
@@ -272,7 +272,7 @@ eval <- rbind.data.frame(E_ev, EC_ev)
 
 ggplot() + geom_boxplot(data = eval, aes(x = tipo_ext, y = auc_ratio))
 ```
-![](prac_2_files/figure-markdown_github/plot_7_pt.png)
+![](/assets/images/plot_7_pt.png)
 
 # ANALISIS DE EXTRAPOLACIÓN
 ## CORRER EL MOP
@@ -290,7 +290,7 @@ mop_res <- mop(M_stack = mvars_stack, G_stack = gvars_stack, percent = 10,
 ``` r
 plot(mop_res)
 ```
-![](prac_2_files/figure-markdown_github/plot_8_pt.png)
+![](/assets/images/plot_8_pt.png)
 
 # EJERCICIO PARA USTEDES
 
@@ -306,3 +306,4 @@ IMAGINEMOS QUE EL SITIO NATIVO DE *C. similis* ES FLORIDA E INVADIÓ MEXICO Y CE
 ¿CÓMO CAMBIAN LAS CURVAS DE RESPUESTA?
 
 ¿QUÉ PROCEDIMIENTO DE TRANSFERENCIA USARIAN DEPENDIENDE DEL ESCENARIO?
+
