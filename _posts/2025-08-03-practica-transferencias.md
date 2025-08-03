@@ -39,10 +39,12 @@ library(rnaturalearth) # Descargar datos geoespaciales.
 # library(rnaturalearthdata) # Proveer datos para rnaturalearth.
 library(kuenm) # Herramientas para modelado de nicho ecológico.
 library(ggplot2) # Creación de gráficos
-library(terra)
-library(ntbox)
+library(terra) # Manejo y análisis de datos espaciales raster y vectoriales.
+library(ntbox) # Herramientas para modelado de nicho ecológico.
+
 ```
 # EXPLORAMOS LOS DATOS
+Primero exploremos/visualizemos los datos
 ## REGISTROS DE PRESENCIA
 ``` r
 # Cargar registros de presencia
@@ -126,14 +128,19 @@ maxent_path <- "C:/Users/tsunnyk/Documents/models"
 wait <- FALSE
 # Mantener en TRUE para correr el analisis
 run <- TRUE
+```
+La función *kuenm_cal* permite construir modelos **candidatos** probando todas las combinaciones
+tipos de respuesta, multiplicadores de regularización, y sets de variables ambientales
+
+``` r
 # Función para crear los modelos candidatos
 kuenm_cal(occ.joint = occ_joint, occ.tra = occ_tra, M.var.dir = M_var_dir, 
           batch = batch_cal, out.dir = out_dir, reg.mult = reg_mult, f.clas = f_clas, 
           maxent.path = maxent_path, wait = wait, run = run)
 ```
-![](/assets/images/plot_4_pt.png)
 
 ## Evaluación y selección de los mejores modelos
+Nuevamente definimos los argumentos
 ``` r
 # Archivo que usaremos para evaluar nuestros modelos candidatos
 occ_test <- "occ_test.csv"
@@ -149,6 +156,12 @@ iterations <- 100
 kept <- TRUE
 # Criterio de selección del modelo (recomendado seleccionar con base en OR y AICc) 
 selection <- "OR_AICc"
+
+```
+La función *kuenm_ceval* nos permite evaluar todos los modelos candidatos construidos 
+con la función anterior
+
+``` r
 # Función para realizar la evaluación
 cal_eval <- kuenm_ceval(path = out_dir, occ.joint = occ_joint, occ.tra = occ_tra, 
                         occ.test = occ_test, batch = batch_cal,
@@ -156,7 +169,9 @@ cal_eval <- kuenm_ceval(path = out_dir, occ.joint = occ_joint, occ.tra = occ_tra
                         iterations = iterations, kept = kept, selection = selection)    
 ```
 
+
 ## ¿Cuantos mejores modelos obtuvimos?
+Podemos revisar el resultado de la evaluación
 ``` r
 # cargamos los resultados de la evaluación
 best_mod <- read_csv("Calibration_results/selected_models.csv")
@@ -165,8 +180,9 @@ view(best_mod)
 print(best_mod)
 print(best_mod$Model)
 ```
+![](/assets/images/plot_4_pt.png)
 
-## construimos el modelo final (aquí transferimos)
+## construimos el modelo final (aquí transferimos a otras regiones o tiempos)
 ``` r
 # Nombre que tendrá el archivo batch (igual que en la calibración)
 batch_fin <- "final_models"
@@ -242,7 +258,13 @@ points(occs_ind_spatvector, pch = 16, cex = 1, col = "red")
 ![](/assets/images/plot_6_pt.png)
 
 ### CURVAS DE RESPUESTA
-CARGAR IMAGENES
+Extrapolación
+![](/assets/images/plot_e_pt.png)
+Extrapolación con clamping
+![](/assets/images/plot_ec_pt.png)
+No extrapolación o truncación
+![](/assets/images/plot_ne_pt.png)
+
 ## Podemos evaluar el modelo en la zona de transferencia
 ``` r
 occs_inv <- read_csv("occ_ind.csv") %>%
@@ -294,20 +316,3 @@ mop_res <- mop(M_stack = mvars_stack, G_stack = gvars_stack, percent = 10,
 plot(mop_res)
 ```
 ![](/assets/images/plot_8_pt.png)
-
-# EJERCICIO PARA USTEDES
-
-IMAGINEMOS QUE EL SITIO NATIVO DE *C. similis* ES FLORIDA E INVADIÓ MEXICO Y CENTROAMERICA.. ¿CÓMO SE VEN LOS RESULTADOS?
-
-# PREGUNTAS 
-¿EN QUÉ ESCENARIO SE PREDICE MEJOR LA INVASIÓN?
-
-¿QUÉ CAMBIA EN LAS MÉTRICAS DE EVALUACIÓN?
-
-¿CÓMO CAMBIA EL MOP?
-
-¿CÓMO CAMBIAN LAS CURVAS DE RESPUESTA?
-
-¿QUÉ PROCEDIMIENTO DE TRANSFERENCIA USARIAN DEPENDIENDE DEL ESCENARIO?
-
-
