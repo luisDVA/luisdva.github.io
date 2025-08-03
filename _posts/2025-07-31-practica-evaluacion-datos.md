@@ -35,7 +35,7 @@ library(dplyr)   # Manipulación y transformación de datos tabulares (filtrar, 
 library(ggplot2) # Creación de gráficos
 library(kuenm)   # Calibración y evaluación de modelos de nicho ecológico.
 library(dismo) # Implementación de algoritmos para modelos de distribución de especies (SDM).
-library(ecospat) # Used to estimate CBI
+library(ecospat) # Usado para estimar el CBI (indice continuo de boyce)
 ```
 
 ## Cargamos los datos de presencia y capas ambientales
