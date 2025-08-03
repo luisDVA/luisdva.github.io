@@ -34,6 +34,7 @@ library(terra)   # Manejo y análisis de datos espaciales (raster/vector).
 library(dplyr)   # Manipulación y transformación de datos tabulares (filtrar, seleccionar).
 library(ggplot2) # Creación de gráficos
 library(kuenm)   # Calibración y evaluación de modelos de nicho ecológico.
+library(dismo) # Implementación de algoritmos para modelos de distribución de especies (SDM).
 ```
 
 ## Cargamos los datos de presencia y capas ambientales
