@@ -87,11 +87,10 @@ author:
     - label: "Bluesky"
       icon: "fab fa-fw fa-Bluesky"
       url: "https://bsky.app/profile/lopezreyeska.bsky.social"
-      - label: "Instagram"
+    - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/reisu_kei"
       
-
 # Site Footer
 footer:
   links:
