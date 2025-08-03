@@ -1,6 +1,6 @@
 # Site navigation links
 main:
- - title: "About me"
+ - title: "About"
    url: /about/
  - title: "Publications"
    url: /publications/
