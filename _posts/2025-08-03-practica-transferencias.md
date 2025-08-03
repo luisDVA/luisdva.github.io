@@ -4,7 +4,7 @@ title: "Kuenm y transferencias"
 author: "Kevin López-Reyes"
 date: 2025-08-03
 categories: [practice]
-permalink: /resources/practica-evaluacion-datos/ # Esta será la URL de tu post
+permalink: /resources/practica-transferencias/ # Esta será la URL de tu post
 toc: true # Activa la Tabla de Contenido
 toc_label: "Contenidos de la Práctica" # Título de la TOC
 toc_icon: "fa-solid fa-book" # Icono para la TOC
@@ -321,6 +321,7 @@ plot(mop_res)
 # ¿CÓMO CAMBIAN LAS CURVAS DE RESPUESTA?
 
 # ¿QUÉ PROCEDIMIENTO DE TRANSFERENCIA USARIAN DEPENDIENDE DEL ESCENARIO?
+
 
 
 
