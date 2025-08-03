@@ -2,7 +2,7 @@
 layout: single
 title: "Kuenm y transferencias"
 author: "Kevin López-Reyes"
-date: 2025-07-31
+date: 2025-08-03
 categories: [practice]
 permalink: /resources/practica-evaluacion-datos/ # Esta será la URL de tu post
 toc: true # Activa la Tabla de Contenido
@@ -321,5 +321,6 @@ plot(mop_res)
 # ¿CÓMO CAMBIAN LAS CURVAS DE RESPUESTA?
 
 # ¿QUÉ PROCEDIMIENTO DE TRANSFERENCIA USARIAN DEPENDIENDE DEL ESCENARIO?
+
 
 
