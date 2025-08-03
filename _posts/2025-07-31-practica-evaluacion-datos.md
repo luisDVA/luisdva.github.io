@@ -216,8 +216,8 @@ El método de tablero de ajedrez básico divide los puntos en k = 2 grupos
 utilizando un patrón de tablero de ajedrez simple.
 
 ``` r
-cb1 <- get.checkerboard(occs, envs, bg,
-                         aggregation.factor=30) #puedes cambiar
+cb1 <- get.checkerboard1(occs, envs, bg,
+                         aggregation.factor = 30) #puedes cambiar
                           #este parámetro para crear "cajas" más grandes.
 # visualizamos presencias
 evalplot.grps(pts = occs, pts.grp = cb1$occs.grp, envs = envs)
