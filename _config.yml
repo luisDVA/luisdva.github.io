@@ -85,8 +85,12 @@ author:
       icon: "fab fa-fw fa-google"
       url: "https://scholar.google.com/citations?user=5S9qAwkAAAAJ&hl=es"
     - label: "Bluesky"
-      icon: "fab fa-fw Bluesky"
+      icon: "fab fa-fw fa-Bluesky"
       url: "https://bsky.app/profile/lopezreyeska.bsky.social"
+      - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/reisu_kei"
+      
 
 # Site Footer
 footer:
