@@ -141,6 +141,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
 # Conversion
+enable_copy_code_button: true
 markdown: kramdown
 highlighter: rouge
 lsi: false
