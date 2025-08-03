@@ -1,9 +1,5 @@
 ---
-title: "Resources"
+title: "Photos"
 permalink: /photos/
-layout: category
-taxonomy: photos
-entries_layout: list
-author_profile: true
 ---
-En construcción
+# En construcción
