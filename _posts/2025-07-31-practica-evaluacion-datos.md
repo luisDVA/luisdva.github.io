@@ -17,28 +17,27 @@ share: true # Activa botones de compartir
 show_date: true # Asegura que la fecha se muestre
 ---
 # Introducción
+En esta práctica utilizaremos los registros de presencia de la especie *Leopardus wiedii*, 
+la paquetería *ENMEval* 2.0 (Kass *et al*., 2025) y el algoritmo
+MaxEnt (Phillips *et al*., 2006) para explorar los diferentes métodos de
+partición de datos (registros de presencia), utilizados en la modelación de nichos ecológicos.
 
-En esta práctica utilizaremos los registros de la especie *Leopardus
-wiedii*, la paquetería ENMEval 2.0 (Kass *et al*., 2025) y el algoritmo
-MaxEnt (Phillips *et al*., 2006) para explorar diferentes métodos de
-partición de datos en la modelación de distribución de especies. El
-objetivo de esta práctica es comparar diferentes métodos partición de datos,
-así como su efecto en las métricas de evaluación.
-
-# Descargar archivos
-Descargar la carpeta del proyecto [aqui](https://drive.google.com/drive/folders/1rlSLD5f-CssSEgztnzTlzS7Z_KUywj8z?usp=drive_link)
+# Descargamos la carpeta del proyecto
+Primero, necesitamos descargar la carpeta del proyecto [aqui](https://drive.google.com/drive/folders/1rlSLD5f-CssSEgztnzTlzS7Z_KUywj8z?usp=drive_link)
 
 ## Cargamos los paquetes de R
+Para esta práctica, utilizaremos diferentes paquetes de R. Vamos a cargarlos, si no los tienes instalados, utiliza la función
+*install.packages()* o visita la página de ayuda del paquete.
 ``` r
-library(ENMeval)
-library(terra)
-library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(kuenm)
+library(ENMeval) # Calibración y evaluación de modelos de nicho ecológico.
+library(terra)   # Manejo y análisis de datos espaciales (raster/vector).
+library(dplyr)   # Manipulación y transformación de datos tabulares (filtrar, seleccionar).
+library(ggplot2) # Creación de gráficos
+library(kuenm)   # Calibración y evaluación de modelos de nicho ecológico.
 ```
 
-## Carga de datos biológicos y ambientales
+## Cargamos los datos de presencia y capas ambientales
+Antes de iniciar con la modelación, necesitamos cargar nuestros datos de presencia, y variables ambientales
 ``` r
 # Leer datos biológicos
 occs <- read.csv("occs/occs_lw.csv")
@@ -55,7 +54,9 @@ points(occs, pch = 19)
 ```
 ![](/assets/images/datos-biologicos-1.png)
 
-## Generamos los puntos de bg
+## Generamos los puntos de fondo (background)
+El algoritmo maxent trabaja con datos de presencia, y puntos de fondo (background). Especificamente, 
+el paquete *ENMeval* necesita un objeto que contenga las coordenadas geográficas de dichos puntos de trasfondo.
 ``` r
 n.bg <- 1000 # número de puntos de bg
 vals_capa <- values(envs[[3]]) # Obtener los valores del raster
@@ -70,7 +71,7 @@ colnames(bg) <- colnames(occs)
 ![](/assets/images/bg.png)
 
 ## Función pROC
-
+En el paquete *ENMeval*, es posible cargar nuestras funciones personalizadas. Aqui podemos definir una del paquete *kuenm*
 ``` r
 # Definimos una función personalizada para implementar la pROC
 proc <- function(vars) {
@@ -82,50 +83,22 @@ proc <- function(vars) {
 ```
 
 # Particiones
+*ENMeval* ofrece diversas formas de particionar las localidades de presencia y 
+de fondo en grupos para el entrenamiento y la validación de los modelos. 
+Los usuarios **deben considerar cuidadosamente los objetivos de su estudio y la influencia 
+del sesgo espacial al decidir el método de partición de datos**.
 
 ## Particiones aleatorias
-
-Los dos métodos siguientes no tienen en cuenta la autocorrelación
-espacial entre los registros de validación y entrenamiento. Por lo que,
-es importante considerar que la partición aleatoria puede llevar a la
-sobreestimación del modelo si los registros de presencia de calibración
-y evaluación están próximas entre sí, debido a que las localidades
-utilizadas para evaluar el modelo no son independientes de las
-utilizadas para calibrarlo.
-
-### Jackknife (leave-one-out)
-
-Principalmente, al trabajar con conjuntos de datos relativamente
-pequeños (e.g. 25 registros de presencia; Pearson *et al*., 2007;
-Shcheglovitova y Anderson, 2013). Esto se conoce como partición
-jackknife o “dejar uno fuera” (Hastie *et al*., 2009).
-
-``` r
-jack <- get.jackknife(occs, bg)
-evalplot.grps(pts = occs, pts.grp = jack$occs.grp, envs = envs)
-```
-
-![](/assets/images/jackknife-particion-1.png)
-
-``` r
-# Corremos el modelo
-e.mx_jack <- ENMevaluate(occs = occs, #Registros de presencia
-                          envs = envs, #Capas ambientales
-                          bg = bg, #Puntos de background
-                          algorithm = 'maxnet', #Algoritmo
-                          partitions = 'jackknife', #Método de partición
-                          tune.args = list(fc = c("L","LQ","LQP"), rm = 1),
-                          user.eval = proc) #Métrica adicional (pROC)
-```
-
-    ##   |                                                                              |                                                                      |   0%  |                                                                              |=======================                                               |  33%  |                                                                              |===============================================                       |  67%  |                                                                              |======================================================================| 100%
+Los dos métodos siguientes no tienen en cuenta explicitamente la estructura 
+geográfica al momento de particionar los registros de validación y entrenamiento.
 
 ### Random k-fold
-
 El método de «k-fold aleatorio» divide aleatoriamente los registros de
-presencia en un número de (k) bins o grupos especificado por el usuario
+presencia en un número de (k) bins o grupos, especificado por el usuario
 (Hastie *et al*., 2009). Este método es ideal utilizarlo con conjuntos de
-registros de presencia grandes.
+registros de presencia grandes. En la calibración, se utilizarán (k)-1
+para entrenar el modelo y se usará el grupo no incluido para validar. 
+Esto se repetirá n veces para el número de k.
 
 ``` r
 rand <- get.randomkfold(occs, bg, k = 5) #En este caso elegimos 5
@@ -147,43 +120,62 @@ e.mx_kfold <- ENMevaluate(occs = occs,
 
     ##   |                                                                              |                                                                      |   0%  |                                                                              |=======================                                               |  33%  |                                                                              |===============================================                       |  67%  |                                                                              |======================================================================| 100%
 
-## Particiones geográficamente estructuradas
-
-Los métodos de partición son variaciones de las particiones
-geográficamente estructuradas (Radosavljevic y Anderson, 2014).
-Básicamente, estos métodos dividen los registros de presencia y
-background en grupos de evaluación basados en reglas espaciales. El
-objetivo es reducir la autocorrelación espacial entre los registros
-utilizados en la validación y el entrenamiento, evitando inflar el
-rendimiento del modelo, al menos para los conjuntos de datos resultantes
-de un muestreo sesgado (Veloz 2009, Wenger y Olden 2012, Roberts et
-al. 2017).
-
-### Bloques
+### Jackknife (leave-one-out)
+Es un tipo especial de k-fold donde el número de grupos (k) es igual al número total de registros.
+Es útil al trabajar con conjuntos de datos relativamente
+pequeños (e.g. 25 registros de presencia; Pearson *et al*., 2007;
+Shcheglovitova y Anderson, 2013). Esto se conoce como partición
+jackknife o “dejar uno fuera” (Hastie *et al*., 2009).
 
 ``` r
-# El método de "bloque" particiona los datos según la mediana de la latitud 
-# y longitud que dividen los registros de presencia en cuatro grupos espaciales de
-# igual número o lo más próximos posible.
-
-block <- get.block(occs, bg, orientation = "lat_lon")
-
-# El objeto resultante es una lista de dos vectores que proporcionan la
-# designación del bloque o bin para cada registro de presencia y background
-table(block$occs.grp)
+jack <- get.jackknife(occs, bg)
+evalplot.grps(pts = occs, pts.grp = jack$occs.grp, envs = envs)
 ```
 
+![](/assets/images/jackknife-particion-1.png)
+
+``` r
+# Corremos el modelo
+e.mx_jack <- ENMevaluate(occs = occs, #Registros de presencia
+                          envs = envs, #Capas ambientales
+                          bg = bg, #Puntos de background
+                          algorithm = 'maxnet', #Algoritmo
+                          partitions = 'jackknife', #Método de partición
+                          tune.args = list(fc = c("L","LQ","LQP"), rm = 1),
+                          user.eval = proc) # Métrica adicional (pROC)
+```
+
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |=======================                                               |  33%  |                                                                              |===============================================                       |  67%  |                                                                              |======================================================================| 100%
+
+## Particiones geográficamente estructuradas
+Estos métodos dividen los registros de presencia y
+background en grupos de evaluación basados en reglas espaciales. El
+objetivo es reducir la autocorrelación espacial entre los registros
+utilizados en la validación y el entrenamiento
+(Veloz 2009, Wenger y Olden 2012, Roberts et al. 2017).
+
+### Bloques
+El método de "bloque" particiona los datos según la mediana de la latitud 
+y longitud que dividen los registros de presencia en cuatro grupos espaciales de
+igual número o lo más próximos posible.
+La primera dirección divide los registros de presencia en dos grupos, y la 
+segunda divide cada uno de ellos en dos grupos adicionales, resultando en cuatro grupos.
+Tanto los registros de presencia como los de background se asignan a cada uno de 
+los cuatro bloques o bins, según su posición con respecto a estas líneas.
+``` r
+block <- get.block(occs, bg, orientation = "lat_lon")
+
+```
+El objeto resultante es una lista de dos vectores que proporcionan la
+designación del bloque o bin para cada registro de presencia y background
+``` r
+table(block$occs.grp)
+```
     ## 
     ##  1  2  3  4 
     ## 10 10 10  9
 
 ``` r
-# La primera dirección divide los registros de presencia en dos grupos, y la 
-# segunda divide cada uno de ellos en dos grupos adicionales, resultando en cuatro grupos.
-# Tanto los registros de presencia como los de background se asignan a cada uno de 
-# los cuatro bloques o bins, según su posición con respecto a estas líneas 
-
-# bloques de registros de presencia
 evalplot.grps(pts = occs, pts.grp = block$occs.grp, envs = envs) + 
   ggplot2::ggtitle("Spatial block partitions: occurrences")
 ```
@@ -212,14 +204,12 @@ e.mx_block <- ENMevaluate(occs = occs,
     ##   |                                                                              |                                                                      |   0%  |                                                                              |=======================                                               |  33%  |                                                                              |===============================================                       |  67%  |                                                                              |======================================================================| 100%
 
 ### Checkerboard básico
-
-Estos generan cuadrículas como un tablero de ajedrez a lo largo de la
+Este método genera cuadrículas como un tablero de ajedrez a lo largo de la
 extensión del área de calibración y dividen los registros de presencia
 en grupos según su ubicación en el tablero. A diferencia del método de
 bloques, ambos métodos de tablero de ajedrez subdividen el área de
 calibración equitativamente, aunque no garantizan el mismo número de
-localidades de ocurrencia en cada bin o grupo.
-
+localidades de presencia en cada bin o grupo.
 El método de tablero de ajedrez básico divide los puntos en k = 2 grupos
 utilizando un patrón de tablero de ajedrez simple.
 
@@ -256,7 +246,6 @@ e.mx_check1 <- ENMevaluate(occs = occs,
     ##   |                                                                              |                                                                      |   0%  |                                                                              |=======================                                               |  33%  |                                                                              |===============================================                       |  67%  |                                                                              |======================================================================| 100%
 
 ### Checkerboard jerárquico
-
 El método de tablero de Checkerboard jerárquico genera k = 4 grupos
 espaciales mediante un enfoque de dos escalas anidadas. Este método
 aplica dos factores de agregación secuenciales: primero crea una grilla
@@ -302,7 +291,6 @@ e.mx_check2 <- ENMevaluate(occs = occs,
     ##   |                                                                              |                                                                      |   0%  |                                                                              |=======================                                               |  33%  |                                                                              |===============================================                       |  67%  |                                                                              |======================================================================| 100%
 
 # Métricas
-
 ## Resultados de evaluación
 
 ``` r
@@ -329,7 +317,6 @@ e.mx_check1@results
     ## 3   2.211729 0.2103490     5
 
 ## Compilación de resultados
-
 ``` r
 # Asignamos los resultados de la evaluacion en un dataframe
 res_block <- eval.results(e.mx_block)
@@ -340,7 +327,6 @@ res_kfold <- eval.results(e.mx_kfold)
 ```
 
 ## Comparación y visualización
-
 ``` r
 # Agregamos una columna para distinguir los tipos de partición
 res_block["Tipo_particion"] <- "Bloque"
@@ -387,9 +373,7 @@ ggplot(data_long, aes(x = Tipo_particion, y = Valor, color = Tipo_particion, fil
 ![](/assets/images/grafico-metricas-1.png)
 
 # Visualización de modelos
-
 ## Selección de modelos óptimos
-
 ``` r
 # Utilizamos un protocolo secuencial para elegir un modelo de cada tipo de partición:
 # la menor tasa de omisión y el máximo AUC
@@ -415,7 +399,6 @@ opt.seq_kfold <- res_kfold %>%
 ```
 
 ## Extracción de modelos
-
 ``` r
 # Ahora seleccionamos solo ese modelo de nuestro conjunto de modelos
 mod.seq_block <- eval.models(e.mx_block)[[opt.seq_block$tune.args]]
@@ -426,7 +409,6 @@ mod.seq_kfold <- eval.models(e.mx_kfold)[[opt.seq_kfold$tune.args]]
 ```
 
 ## Predicciones y mapas
-
 ``` r
 # Finalmente seleccionamos una predicción
 pred.seq_block <- eval.predictions(e.mx_block)[[as.character(opt.seq_block$tune.args)]]
