@@ -90,6 +90,8 @@ de fondo en grupos para el entrenamiento y la validación de los modelos.
 Los usuarios **deben considerar cuidadosamente los objetivos de su estudio y la influencia 
 del sesgo espacial al decidir el método de partición de datos**.
 
+![](/assets/images/checker.jpg)
+
 ## Particiones aleatorias
 Los dos métodos siguientes no tienen en cuenta explicitamente la estructura 
 geográfica al momento de particionar los registros de validación y entrenamiento.
