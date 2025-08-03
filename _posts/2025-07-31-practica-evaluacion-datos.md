@@ -344,7 +344,7 @@ data_results <- rbind(res_block, res_check1, res_check2, res_jack, res_kfold)
 
 data_long <- data_results %>%
   # Seleccionar las columnas necesarias
-  select(Tipo_particion, or.10p.avg, auc.val.avg ) %>%
+  dplyr::select(Tipo_particion, or.10p.avg, auc.val.avg ) %>%
   # Convertir a formato largo directamente (sin agrupar ni promediar)
   pivot_longer(
     cols = c(or.10p.avg, auc.val.avg),
