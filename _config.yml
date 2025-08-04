@@ -58,10 +58,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-gtag"
+  provider               : 
   google:
-    tracking_id          : UA-65540014-1
-    anonymize_ip         : true
+    tracking_id          : 
+    anonymize_ip         : 
 
 # Site Author
 author:
