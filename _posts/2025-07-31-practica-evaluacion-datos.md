@@ -31,6 +31,7 @@ Para esta práctica, utilizaremos diferentes paquetes de R. Vamos a cargarlos, s
 ``` r
 library(ENMeval) # Calibración y evaluación de modelos de nicho ecológico.
 library(terra)   # Manejo y análisis de datos espaciales (raster/vector).
+library(tidyverse) # colección de paquetes en R
 library(dplyr)   # Manipulación y transformación de datos tabulares (filtrar, seleccionar).
 library(ggplot2) # Creación de gráficos
 library(kuenm)   # Calibración y evaluación de modelos de nicho ecológico.
