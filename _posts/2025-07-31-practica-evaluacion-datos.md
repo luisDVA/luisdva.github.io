@@ -48,7 +48,7 @@ occs <- read.csv("occs/occs_lw.csv")
 envs.files <- list.files(path = "envs", pattern = ".tif", full.names = TRUE)
 
 # Crear el raster stack con las rutas completas
-envs <- raster::stack(envs.files)
+envs <- rast(envs.files)
 
 # Graficamos para ver los registros
 plot(envs[[3]])
