@@ -10,10 +10,13 @@ header:
 
 Selected work that I have presented at scientific meetings so far.
 
++ Verde Arregoitia, L.D. 2025. Bringing the fun of hex stickers to your R session. _useR! 2025_. Durham, North Carolina, USA.
 
 + Verde Arregoitia, L.D. 2024. Personalización y estilo con css y herramientas de diseño web. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual.
  
 + Verde Arregoitia, L.D. 2024. Ciencia de datos multilenguaje en un solo IDE de nueva generación. _NERDEAR.LA_ México. CDMX.
+
++ Verde Arregoitia, L.D. 2024. Efectos de coexistencia, clima, y vegetación en el tamaño corporal de murciélagos del género _Sturnira_ en México. _XVI Congreso Nacional de Mastozoología AMMAC_. Pachuca, Hidalgo, México.
 
 + Verde Arregoitia, L.D. 2024. Why'd you load that package for? _posit::conf(2024)_. Seattle, Washington, USA. [youtube](https://youtu.be/q4vmmlUEoQg?si=pZI68H-ZjTXXU2xo)
 
