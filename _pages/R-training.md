@@ -15,7 +15,7 @@ This page covers the various R courses and workshops that I have either develope
 
 - Since February of 2021 I am an RStudio Education Certified Trainer (`tidyverse` specialization). See my profile [here](https://education.rstudio.com/trainers/people/verde_arregoitia+luis/){:target="_blank"}.   
 - As of June 2022 I am a certified Carpentries [Instructor](https://carpentries.org/instructors/){:target="_blank"} (Software Carpentry).
-- rOpenSci Champions program [mentor](https://ropensci.org/champions/).
+- rOpenSci Champions program [mentor](https://ropensci.org/champions/) 2023-2026.
 
 
 ## On demand courses
@@ -38,7 +38,7 @@ This course covers the key stages for cleaning messy data efficiently, including
  
 - [Introducción práctica a la programación en R](https://www.physalia-courses.org/courses-workshops/r-spanish/). Physalia courses. 28-31 August 2023.
 
-- [Herramientas para el manejo de datos de biodiversidad en R](http://posgrado.inecol.edu.mx/cursos/detalle.php?ref=00000001451&fbclid=IwY2xjawEY1FdleHRuA2FlbQIxMAABHWjDenDe2TmMTNDa2Fn7SGsjYLH01ZyJeQyYMxNHJ8RbLs8RwDy5D6ejPA_aem_4l9JmGUmdG27Glm04Fw3Vw). 5-day postgraduate course. 2023 & 2024.
+- [Herramientas para el manejo de datos de biodiversidad en R](http://posgrado.inecol.edu.mx/cursos/detalle.php?ref=00000001451&fbclid=IwY2xjawEY1FdleHRuA2FlbQIxMAABHWjDenDe2TmMTNDa2Fn7SGsjYLH01ZyJeQyYMxNHJ8RbLs8RwDy5D6ejPA_aem_4l9JmGUmdG27Glm04Fw3Vw). 5-day postgraduate course. 2023, 2024 & 2025.
   
 - Regular Expressions and Working with Text Strings. _Workshop for R-Ladies St. Louis_. February 22, 2023.[slides](https://luisdva.github.io/RLadiesSTLregex/){:target="_blank"}    
 
