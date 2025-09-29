@@ -10,6 +10,9 @@ header:
 
 Selected work that I have presented at scientific meetings so far.
 
+
++ Verde Arregoitia, L.D. 2025. Bold indicates negative? _posit::conf(2025)_. Atlanta, Georgia, USA.
+
 + Verde Arregoitia, L.D. 2025. Bringing the fun of hex stickers to your R session. _useR! 2025_. Durham, North Carolina, USA.
 
 + Verde Arregoitia, L.D. 2024. Personalización y estilo con css y herramientas de diseño web. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual.
