@@ -12,6 +12,16 @@ header:
 
 [Google Scholar profile](https://scholar.google.com.au/citations?user=Ii0dP6kAAAAJ&hl=en)
 
++ **Verde Arregoitia, L. D.**, Villalobos, F., Cooper, N., & D’Elía, G. (2025). Prevalence and patterns of convergent ecomorphological evolution in rodents. _Biological Journal of the Linnean Society_, 146(4), blaf122.
+
++ **Verde Arregoitia, L. D.** & Fabricio Villalobos (2026). Advances in the Biogeography of Neotropical Mammals. Mammals of Middle and South America: History, Biogeography, Conservation, 1-13. Springer Nature Switzerland.
+
++ **Verde Arregoitia, L. D.** (2025). Ornate Shrew Sorex ornatus Merriam, 1895. In Mammals of Middle and South America: Eulipotyphla (pp. 1-13). Cham: Springer Nature Switzerland.
+
++ **Verde Arregoitia, L. D.** (2025). Mexican Mole Scapanus anthonyi JA Allen, 1893. In Mammals of Middle and South America: Eulipotyphla (pp. 1-8). Cham: Springer Nature Switzerland.
+
++ **Verde Arregoitia, L. D.** (2025). Mexican Mole Scapanus anthonyi JA Allen, 1893. In Mammals of Middle and South America: Eulipotyphla (pp. 1-8). Cham: Springer Nature Switzerland.
+
 + Martinez-Harms, M.J., Larraín-Barrios, B., **Verde Arregoitia, L.D.**, Palma-Duque, J., and Gelcich, S. "Navigating ecosystem services trade-offs: A global comprehensive review." Ambio (2025): 1-19.
 
 + Martínez-Harms, M.J., Larraín-Barrios, B., **Verde Arregoitia, L.D.**, Gelcich, S., Alvarez, R.R., & Tecklin, D. (2024). Spatial assessment of risks faced by marine protected areas in Chilean Patagonia. Ecology and Society, 29(4).
