@@ -32,6 +32,20 @@ This course covers the key stages for cleaning messy data efficiently, including
 
 ## Past courses, workshops, and tutorials
 
+- [Coding with AI in RStudio](https://www.eventbrite.cl/e/coding-with-ai-in-rstudio-tickets-1962817615325?aff=oddtdtcreator). Pre-conference Workshop for LatinR 2025. December 2nd 2025. Co-instructor with Juan Cruz Rodriguez.
+
+- [R para el tratamiento de Hojas de Cálculo](https://estacion-r.com/courses/60b7a439-8268-4869-a780-19f9f06fd798/detail?type=sync). Estación R. Online. 11 November to 02 December 2025. 
+
+- [Integrating Large Language Model tools to our R workflows](https://www.physalia-courses.org/courses-workshops/llms-4-r-ween/). Post-conference Course (online) after the The Wales Ecology & Evolution Network (WEEN) Conference. 24 November 2025.
+
+- [Getting started with Large Language Models in R](https://luisdva.github.io/llmsr-book/ld-TunisRUG-slides/slidesLV.html). Online workshop for Tunis R Users Group. 31 July 2025.
+
+- [LLMs in the R Space](https://www.youtube.com/watch?v=0WsF4XcIhYI). Workshop (online) for R-Ladies Gaborone. 28 June 2025.
+
+- [A practical introduction to R](https://www.physalia-courses.org/courses-workshops/r-tidyverse/). Physalia Courses. 2-4 June 2025.
+
+- [Integrating Large Language Model tools to our R workflows](https://www.physalia-courses.org/courses-workshops/llms-4-r/). Physalia Courses Online. 5 and 12 November 2025. 
+
 - [A practical introduction to R](https://www.physalia-courses.org/courses-workshops/r-tidyverse/). Physalia Courses. 2-4 September 2024.
 
 - [Hands-On Data Manipulation and Visualization with the tidyverse and ggplot2](https://www.evolmar.it/physalia-course.html). November 2023. Evolmar conference.
