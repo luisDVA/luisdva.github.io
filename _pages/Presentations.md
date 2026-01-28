@@ -12,13 +12,13 @@ header:
 
 + Verde Arregoitia. L.D. Herramientas para usar LLMs en R. 2025. Herramientas para usar LLMs en R. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual. [youtube](https://www.youtube.com/watch?v=6Tl4NbsXlQo)
 
-+ Verde Arregoitia. LD., Fabricio Villalobos, Natalie Cooper & Guillermo D’Elía. 2025. Expectativas y patrones de evolución convergente en roedores. _1er Congreso Mexicano de Evolución. UNAM, CDMX, Mexico.	
++ Verde Arregoitia. LD., Fabricio Villalobos, Natalie Cooper & Guillermo D’Elía. 2025. Expectativas y patrones de evolución convergente en roedores. _1er Congreso Mexicano de Evolución_. UNAM, CDMX, Mexico.	
 
 + Verde Arregoitia, L.D. 2025. Bold indicates negative? _posit::conf(2025)_. Atlanta, Georgia, USA. [youtube](https://www.youtube.com/watch?v=NJz0779Seto)
 
 + Verde Arregoitia, L.D. 2025. Bringing the fun of hex stickers to your R session. _useR! 2025_. Durham, North Carolina, USA. [youtube](https://www.youtube.com/watch?v=shGOWlbquo4)
 
-+ Verde Arregoitia, L.D. 2024. Personalización y estilo con css y herramientas de diseño web. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual.
++ Verde Arregoitia, L.D. 2024. Personalización y estilo con css y herramientas de diseño web. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual. [youtube](https://www.youtube.com/watch?v=kiHdjTNRu9E)
  
 + Verde Arregoitia, L.D. 2024. Ciencia de datos multilenguaje en un solo IDE de nueva generación. _NERDEAR.LA_ México. CDMX.
 
