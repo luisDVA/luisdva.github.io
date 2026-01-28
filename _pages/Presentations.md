@@ -8,8 +8,11 @@ header:
   
 ---
 
-Selected work that I have presented at scientific meetings so far.
+#### Selected work that I have presented at scientific meetings so far.
 
++ Verde Arregoitia. L.D. Herramientas para usar LLMs en R. 2025. Herramientas para usar LLMs en R. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual.
+
++ Verde Arregoitia. LD., Fabricio Villalobos, Natalie Cooper & Guillermo D’Elía. 2025. Expectativas y patrones de evolución convergente en roedores. _1er Congreso Mexicano de Evolución. UNAM, CDMX, Mexico.	
 
 + Verde Arregoitia, L.D. 2025. Bold indicates negative? _posit::conf(2025)_. Atlanta, Georgia, USA.
 
