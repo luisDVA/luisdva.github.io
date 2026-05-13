@@ -96,6 +96,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/luisdva/"
+    - label: "BlueSky"
+      icon: "fab fa-bluesky"
+      url: "https://bsky.app/profile/liomys.mx"
 
 
 # Reading Files
