@@ -12,6 +12,8 @@ header:
 
 [Google Scholar profile](https://scholar.google.com.au/citations?user=Ii0dP6kAAAAJ&hl=en)
 
++ **Verde Arregoitia, L. D.**, Galán-Acedo, C., Nekaris, K. A.-I., Garber, P. A., Hansen, M.F., Bicca-Marques, J.C., Svensson, M.S., Nijman, V., Shanee, S., Chaudhary, A., Estrada, A., Dobrovolski, R., Gouveia, S.F. & F. Villalobos. (2026). Phylogenetic Patterns in Hunting and Extinction Risk in Primates. _Animal Conservation_  
+
 + **Verde Arregoitia, L. D.**, Villalobos, F., Cooper, N., & D’Elía, G. (2025). Prevalence and patterns of convergent ecomorphological evolution in rodents. _Biological Journal of the Linnean Society_, 146(4), blaf122.
 
 + **Verde Arregoitia, L. D.** & Fabricio Villalobos (2026). Advances in the Biogeography of Neotropical Mammals. Mammals of Middle and South America: History, Biogeography, Conservation, 1-13. Springer Nature Switzerland.
