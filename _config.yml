@@ -75,7 +75,7 @@ author:
       icon: "fas fa-fw fa-link"
       url: "https://liomys.mx"
     - label: "BlueSky"
-      icon: "fab fa-fw fa-bluesky"
+      icon: "fab fa-bluesky"
       url: "https://bsky.app/profile/liomys.mx"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -93,9 +93,6 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/luisdverde/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/luisdva/"
