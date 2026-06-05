@@ -10,6 +10,8 @@ header:
 
 #### Selected work that I have presented at scientific meetings so far.
 
++ Mengarelli, S. &  Verde Arregoitia. L.D. 2026. Two Small Approaches to the Big Problem of Formatted Spreadsheets. _Research Data Access & Preservation Association Summit 2026_. Online.
+
 + Verde Arregoitia. L.D. Herramientas para usar LLMs en R. 2025. Herramientas para usar LLMs en R. _LatinR: Conferencia Latinoamericana sobre Uso de R en Investigación + Desarrollo_. Virtual. [youtube](https://www.youtube.com/watch?v=6Tl4NbsXlQo)
 
 + Verde Arregoitia. LD., Fabricio Villalobos, Natalie Cooper & Guillermo D’Elía. 2025. Expectativas y patrones de evolución convergente en roedores. _1er Congreso Mexicano de Evolución_. UNAM, CDMX, Mexico.	
